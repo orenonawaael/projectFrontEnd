@@ -22,8 +22,8 @@ h1, h2, h3 {
 /* --- New Button Styles (for header auth buttons) --- */
 .btn {
     display: inline-block;
-    padding: 10px 20px;
-    border-radius: 5px;
+    padding: 5px 25px;
+    border-radius: 400px;
     text-decoration: none;
     font-weight: 500;
     transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
@@ -55,21 +55,30 @@ h1, h2, h3 {
 
 /* --- Header Section (New Design) --- */
 .main-header {
-    background-color: #000000; /* Warna gelap sesuai desain */
-    padding: 15px 0;
+    background-color: #000000;
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    position: relative; /* Untuk z-index jika ada elemen di atasnya */
-    z-index: 1001; /* Pastikan di atas hero background */
+    position: relative;
+    z-index: 1001;
+    padding-top: 0;
+    padding-bottom: 0;
+    min-height: 0;
+    height: 56px; /* Tinggi standar navbar ramping */
+    display: flex;
+    align-items: center;
 }
 
 .header-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 56px;
+    padding: 0;
 }
 
 .main-header .logo img {
-    height: 40px; /* Ukuran logo di header baru */
+    height: 36px;
+    margin-left: -50px; /* Jarak dari kiri */
+    margin-right: 50px; /* Jarak dari kanan */
     vertical-align: middle;
 }
 
@@ -78,10 +87,11 @@ h1, h2, h3 {
     margin: 0;
     padding: 0;
     display: flex;
+    align-items: center;
 }
 
 .main-header .main-nav ul li {
-    margin: 0 18px;
+    margin: 0 14px;
 }
 
 .main-header .main-nav ul li a {
@@ -89,6 +99,8 @@ h1, h2, h3 {
     color: #f0f0f0; /* Teks terang untuk header gelap */
     font-weight: 400;
     transition: color 0.3s ease;
+    font-size: 1rem;
+    padding: 0 2px;
 }
 
 .main-header .main-nav ul li a:hover {
@@ -98,6 +110,7 @@ h1, h2, h3 {
 .auth-buttons {
     display: flex;
     align-items: center;
+    gap: 8px;
 }
 
 /* --- Hero Section (New Design) --- */
@@ -388,5 +401,725 @@ h1, h2, h3 {
     .category-name {
         font-size: 0.9em;
         padding: 6px 15px;
+    }
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    background-color: var(--white);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px var(--shadow-color);
+    padding: 40px;
+    position: relative; /* For the floating button */
+}
+
+.btn-primary-top,
+.btn-primary-bottom {
+    display: block;
+    width: fit-content;
+    margin: 0 auto 30px auto;
+    padding: 10px 25px;
+    background-color: var(--white);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-primary-top:hover,
+.btn-primary-bottom:hover {
+    background-color: var(--primary-blue);
+    color: var(--white);
+    border-color: var(--primary-blue);
+}
+
+.adoption-section {
+    background-color: var(--primary-blue);
+    border-radius: 10px;
+    padding: 40px 20px;
+    text-align: center;
+    margin-bottom: 30px;
+    position: relative; /* For the dotted border */
+}
+
+.adoption-section::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    border: 2px dashed var(--white);
+    border-radius: 8px;
+    pointer-events: none; /* Allows clicks to pass through */
+}
+
+.section-title {
+    font-size: 2.5rem;
+    color: var(--white);
+    margin-bottom: 40px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    display: inline-block; /* To make background work */
+    padding: 5px 15px;
+    background-color: var(--primary-blue); /* To cover the dashed border */
+    position: relative; /* To bring it above dashed border */
+    z-index: 1; /* Ensure title is above dashed border */
+}
+
+.animal-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    justify-content: center;
+    padding: 20px; /* Padding for the grid inside the blue section */
+}
+
+.animal-card {
+    background-color: var(--white);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px var(--shadow-color);
+    overflow: hidden;
+    text-align: left;
+    transition: transform 0.2s ease;
+}
+
+.animal-card:hover {
+    transform: translateY(-5px);
+}
+
+.animal-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.card-content {
+    padding: 15px;
+}
+
+.card-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: var(--dark-blue);
+    font-weight: 600;
+}
+
+.card-content p {
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 15px;
+    height: 60px; /* Fixed height for descriptions */
+    overflow: hidden; /* Hide overflow if text is too long */
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.btn-detail {
+    padding: 8px 15px;
+    background-color: var(--dark-blue);
+    color: var(--white);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+}
+
+.btn-detail:hover {
+    background-color: #2b6cb0; /* A darker shade of dark-blue */
+}
+
+.location {
+    font-size: 0.85rem;
+    color: #888;
+}
+
+.floating-button {
+    position: fixed; /* Changed to fixed for true floating behavior */
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background-color: var(--dark-blue);
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: 700;
+    box-shadow: 0 4px 10px var(--shadow-color);
+    cursor: pointer;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+}
+
+.floating-button:hover {
+    background-color: #2b6cb0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .animal-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    .adoption-section {
+        padding: 30px 15px;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+        margin-bottom: 30px;
+    }
+
+    .animal-grid {
+        grid-template-columns: 1fr; /* Stack cards on small screens */
+    }
+
+    .floating-button {
+        width: 50px;
+        height: 50px;
+        font-size: 1.8rem;
+        bottom: 20px;
+        right: 20px;
+    }
+
+    .btn-primary-top,
+    .btn-primary-bottom {
+        margin: 0 auto 20px auto;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .card-content h3 {
+        font-size: 1.3rem;
+    }
+
+    .card-content p {
+        font-size: 0.9rem;
+        height: auto; /* Allow description to expand on very small screens */
+    }
+
+    .btn-detail {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+    }
+
+    .location {
+        font-size: 0.75rem;
+    }
+}
+/* --- NEW: Cara Merawat Hewan Kesayanganmu Section --- */
+    .care-guide-section {
+        background: url('https://via.placeholder.com/1200x400/87CEEB/FFFFFF?text=Pet+Care+Background') no-repeat center center/cover; /* Placeholder image */
+        background-size: cover;
+        border-radius: 10px;
+        padding: 60px 20px;
+        text-align: center;
+        margin-bottom: 40px;
+        color: var(--dark-text-blue);
+        position: relative;
+        overflow: hidden; /* For rounded corners */
+}
+
+    .care-guide-section::before { /* Overlay for better text readability */
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(to bottom, rgba(255,255,255,0.7) 0%, rgba(255,255,255,0.9) 100%);
+        z-index: 0;
+}
+
+.care-guide-content {
+    position: relative;
+    z-index: 1;
+}
+
+.care-guide-title {
+    font-size: 2.8rem;
+    color: var(--dark-text-blue);
+    margin-bottom: 40px;
+    font-weight: 700;
+}
+
+.care-guide-items {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+}
+
+.care-item {
+    background-color: var(--white);
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    flex: 1; /* Allows items to grow and shrink */
+    min-width: 250px; /* Minimum width for items before wrapping */
+    max-width: 350px; /* Max width to control size on large screens */
+    text-align: center;
+    transition: transform 0.2s ease;
+}
+
+.care-item:hover {
+    transform: translateY(-5px);
+}
+
+.care-item img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 15px;
+    border-radius: 50%; /* If icons are meant to be circular */
+    object-fit: cover;
+}
+
+.care-item h4 {
+    font-size: 1.2rem;
+    color: var(--dark-blue);
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.care-item p {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* --- NEW: Pelayanan Terbaik Dimulai dari Dokter Terbaik Section --- */
+.doctors-section {
+    padding: 40px 20px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-title-dark { /* For dark text on light background */
+    font-size: 2.5rem;
+    color: var(--dark-text-blue);
+    margin-bottom: 40px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.doctor-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    justify-content: center;
+}
+
+.doctor-card {
+    background-color: var(--white);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px var(--shadow-color);
+    overflow: hidden;
+    text-align: center; /* Center image and content */
+    padding: 20px;
+    transition: transform 0.2s ease;
+}
+
+.doctor-card:hover {
+    transform: translateY(-5px);
+}
+
+.doctor-card img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Circular images for doctors */
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 3px solid var(--primary-blue); /* Border around image */
+}
+
+.doctor-info h3 {
+    font-size: 1.4rem;
+    margin-bottom: 8px;
+    color: var(--dark-blue);
+    font-weight: 600;
+}
+
+.doctor-info p {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 15px;
+    min-height: 50px; /* Ensure consistent height for descriptions */
+    overflow: hidden;
+    text-overflow: ellipsis; /* Add ellipsis if text overflows */
+    display: -webkit-box;
+    
+    -webkit-box-orient: vertical;
+}
+
+/* Re-using existing card-footer and location styles */
+.doctor-card .card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+}
+
+
+/* --- Existing: Animal Adoption Section (retained) --- */
+.animal-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    justify-content: center;
+    padding: 20px; /* Padding for the grid inside the blue section */
+}
+
+.animal-card {
+    background-color: var(--white);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px var(--shadow-color);
+    overflow: hidden;
+    text-align: left;
+    transition: transform 0.2s ease;
+}
+
+.animal-card:hover {
+    transform: translateY(-5px);
+}
+
+.animal-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.card-content {
+    padding: 15px;
+}
+
+.card-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: var(--dark-blue);
+    font-weight: 600;
+}
+
+.card-content p {
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 15px;
+    height: 60px; /* Fixed height for descriptions */
+    overflow: hidden; /* Hide overflow if text is too long */
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.location {
+    font-size: 0.85rem;
+    color: #888;
+}
+
+.floating-button {
+    position: fixed; /* Changed to fixed for true floating behavior */
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background-color: var(--dark-blue);
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: 700;
+    box-shadow: 0 4px 10px var(--shadow-color);
+    cursor: pointer;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+}
+
+.floating-button:hover {
+    background-color: #2b6cb0;
+}
+
+/* --- NEW: Footer Styles --- */
+.main-footer {
+    background-color: var(--footer-bg);
+    color: var(--footer-text);
+    padding: 40px 20px 20px; /* Adjusted padding */
+    margin-top: 50px; /* Space above footer */
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap; /* Allow columns to wrap */
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 30px; /* Space between columns */
+}
+
+.footer-column {
+    flex: 1; /* Allow columns to grow and shrink */
+    min-width: 200px; /* Minimum width before wrapping */
+}
+
+.footer-brand {
+    flex: 1.2; /* Brand column slightly larger */
+    min-width: 250px;
+}
+
+.footer-logo {
+    width: 150px; /* Adjust as needed */
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.footer-column h4 {
+    color: var(--white);
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.footer-column ul {
+    list-style: none;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+    color: var(--footer-text);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+    color: var(--primary-blue);
+}
+
+.footer-contact ul li {
+    display: flex;
+    align-items: flex-start; /* Align icon and text at the top */
+}
+
+.footer-contact ul li i {
+    margin-right: 10px;
+    font-size: 1rem;
+    margin-top: 3px; /* Adjust vertical alignment of icon */
+    color: var(--primary-blue); /* Make icons blue */
+}
+
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px; /* Space between title and icons */
+}
+
+.social-icons a {
+    color: var(--white); /* White icons */
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: var(--primary-blue); /* Blue on hover */
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1); /* Thin white separator */
+}
+
+.footer-bottom p {
+    font-size: 0.85rem;
+    color: var(--footer-text);
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .care-guide-title, .section-title-dark, .section-title {
+        font-size: 2.2rem;
+    }
+    .doctor-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+    .animal-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+    .footer-content {
+        flex-direction: column; /* Stack footer columns */
+        align-items: center;
+        text-align: center;
+    }
+    .footer-column {
+        min-width: unset; /* Remove min-width for stacking */
+        width: 100%; /* Take full width when stacked */
+        margin-bottom: 30px; /* Add space between stacked columns */
+    }
+    .footer-column:last-child {
+        margin-bottom: 0;
+    }
+    .footer-brand .footer-logo {
+        margin: 0 auto 15px auto; /* Center logo when stacked */
+    }
+    .social-icons {
+        justify-content: center; /* Center social icons */
+    }
+    .footer-contact ul li {
+        justify-content: center; /* Center contact info */
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    .care-guide-section {
+        padding: 40px 15px;
+    }
+
+    .care-guide-title, .section-title-dark, .section-title {
+        font-size: 1.8rem;
+        margin-bottom: 30px;
+    }
+
+    .care-guide-items {
+        flex-direction: column; /* Stack items on small screens */
+        align-items: center;
+    }
+
+    .care-item {
+        max-width: 90%; /* Adjust width for stacked items */
+        margin-bottom: 20px;
+    }
+
+    .doctors-section {
+        padding: 30px 15px;
+    }
+
+    .doctor-grid, .animal-grid {
+        grid-template-columns: 1fr; /* Stack cards on small screens */
+    }
+
+    .floating-button {
+        width: 50px;
+        height: 50px;
+        font-size: 1.8rem;
+        bottom: 20px;
+        right: 20px;
+    }
+
+    .btn-primary-top,
+    .btn-primary-bottom {
+        margin: 0 auto 20px auto;
+    }
+
+    .main-footer {
+        padding: 30px 15px 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    .care-guide-title, .section-title-dark, .section-title {
+        font-size: 1.5rem;
+    }
+
+    .care-item h4 {
+        font-size: 1.1rem;
+    }
+
+    .care-item p, .doctor-info p, .card-content p {
+        font-size: 0.85rem;
+        height: auto; /* Allow description to expand on very small screens */
+        min-height: unset; /* Remove min-height for doctors */
+        overflow: visible; /* Show full text */
+    }
+
+    .doctor-info h3, .card-content h3 {
+        font-size: 1.2rem;
+    }
+
+    .btn-detail {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+    }
+
+    .location {
+        font-size: 0.75rem;
+    }
+
+    .doctor-card img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .footer-column h4 {
+        font-size: 1.1rem;
+    }
+
+    .footer-column ul li a, .footer-bottom p {
+        font-size: 0.8rem;
+    }
+
+    .footer-contact ul li {
+        flex-direction: column; /* Stack icon and text for better readability */
+        align-items: center;
+    }
+
+    .footer-contact ul li i {
+        margin-right: 0;
+        margin-bottom: 5px;
     }
 }

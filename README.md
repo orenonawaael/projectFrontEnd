@@ -1,2 +1,0 @@
-# projectFrontEnd
-Tugas Bootcamp Sintech
