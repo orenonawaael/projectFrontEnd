@@ -22,8 +22,8 @@ h1, h2, h3 {
 /* --- New Button Styles (for header auth buttons) --- */
 .btn {
     display: inline-block;
-    padding: 10px 20px;
-    border-radius: 5px;
+    padding: 5px 25px;
+    border-radius: 400px;
     text-decoration: none;
     font-weight: 500;
     transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
@@ -55,21 +55,30 @@ h1, h2, h3 {
 
 /* --- Header Section (New Design) --- */
 .main-header {
-    background-color: #000000; /* Warna gelap sesuai desain */
-    padding: 15px 0;
+    background-color: #000000;
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    position: relative; /* Untuk z-index jika ada elemen di atasnya */
-    z-index: 1001; /* Pastikan di atas hero background */
+    position: relative;
+    z-index: 1001;
+    padding-top: 0;
+    padding-bottom: 0;
+    min-height: 0;
+    height: 56px; /* Tinggi standar navbar ramping */
+    display: flex;
+    align-items: center;
 }
 
 .header-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 56px;
+    padding: 0;
 }
 
 .main-header .logo img {
-    height: 40px; /* Ukuran logo di header baru */
+    height: 36px;
+    margin-left: -50px; /* Jarak dari kiri */
+    margin-right: 50px; /* Jarak dari kanan */
     vertical-align: middle;
 }
 
@@ -78,10 +87,11 @@ h1, h2, h3 {
     margin: 0;
     padding: 0;
     display: flex;
+    align-items: center;
 }
 
 .main-header .main-nav ul li {
-    margin: 0 18px;
+    margin: 0 14px;
 }
 
 .main-header .main-nav ul li a {
@@ -89,6 +99,8 @@ h1, h2, h3 {
     color: #f0f0f0; /* Teks terang untuk header gelap */
     font-weight: 400;
     transition: color 0.3s ease;
+    font-size: 1rem;
+    padding: 0 2px;
 }
 
 .main-header .main-nav ul li a:hover {
@@ -98,6 +110,7 @@ h1, h2, h3 {
 .auth-buttons {
     display: flex;
     align-items: center;
+    gap: 8px;
 }
 
 /* --- Hero Section (New Design) --- */
@@ -838,144 +851,7 @@ h1, h2, h3 {
 
 .location {
     font-size: 0.85rem;
-    color: #888;
-}
-
-.floating-button {
-    position: fixed; /* Changed to fixed for true floating behavior */
-    bottom: 30px;
-    right: 30px;
-    width: 60px;
-    height: 60px;
-    background-color: var(--dark-blue);
-    color: var(--white);
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 2rem;
-    font-weight: 700;
-    box-shadow: 0 4px 10px var(--shadow-color);
-    cursor: pointer;
-    z-index: 1000;
-    transition: background-color 0.3s ease;
-}
-
-.floating-button:hover {
-    background-color: #2b6cb0;
-}
-
-/* Responsive adjustments */
-@media (max-width: 992px) {
-    .care-guide-title, .section-title-dark, .section-title {
-        font-size: 2.2rem;
-    }
-    .doctor-grid {
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    }
-    .animal-grid {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    }
-}
-
-@media (max-width: 768px) {
-    .container {
-        padding: 20px;
-    }
-
-    .care-guide-section {
-        padding: 40px 15px;
-    }
-
-    .care-guide-title, .section-title-dark, .section-title {
-        font-size: 1.8rem;
-        margin-bottom: 30px;
-    }
-
-    .care-guide-items {
-        flex-direction: column; /* Stack items on small screens */
-        align-items: center;
-    }
-
-    .care-item {
-        max-width: 90%; /* Adjust width for stacked items */
-        margin-bottom: 20px;
-    }
-
-    .doctors-section {
-        padding: 30px 15px;
-    }
-
-    .doctor-grid, .animal-grid {
-        grid-template-columns: 1fr; /* Stack cards on small screens */
-    }
-
-    .floating-button {
-        width: 50px;
-        height: 50px;
-        font-size: 1.8rem;
-        bottom: 20px;
-        right: 20px;
-    }
-
-    .btn-primary-top,
-    .btn-primary-bottom {
-        margin: 0 auto 20px auto;
-    }
-}
-
-@media (max-width: 480px) {
-    body {
-        padding: 10px;
-    }
-
-    .container {
-        padding: 15px;
-    }
-
-    .care-guide-title, .section-title-dark, .section-title {
-        font-size: 1.5rem;
-    }
-
-    .care-item h4 {
-        font-size: 1.1rem;
-    }
-
-    .care-item p, .doctor-info p, .card-content p {
-        font-size: 0.85rem;
-        height: auto; /* Allow description to expand on very small screens */
-        min-height: unset; /* Remove min-height for doctors */
-        overflow: visible; /* Show full text */
-    }
-
-    .doctor-info h3, .card-content h3 {
-        font-size: 1.2rem;
-    }
-
-    .btn-detail {
-        padding: 6px 12px;
-        font-size: 0.8rem;
-    }
-
-    .location {
-        font-size: 0.75rem;
-    }
-
-    .doctor-card img {
-        width: 120px;
-        height: 120px;
-    }
-}
-.card-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 10px;
-}
-
-.location {
-    font-size: 0.85rem;
-    color: #888;
+    color: #3483b4;
 }
 
 .floating-button {
@@ -1004,11 +880,18 @@ h1, h2, h3 {
 
 /* --- NEW: Footer Styles --- */
 .main-footer {
-    background-color: var(--footer-bg);
-    color: var(--footer-text);
-    padding: 40px 20px 20px; /* Adjusted padding */
-    margin-top: 50px; /* Space above footer */
+    background-color: #142E49;
+    color: #fff;
+    padding: 40px 0 0 0;   /* Hapus padding bawah, biar warna biru sampai bawah */
+    margin-top: 50px;
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    box-sizing: border-box;
 }
+
+
+
 
 .footer-content {
     display: flex;
@@ -1096,9 +979,12 @@ h1, h2, h3 {
     border-top: 1px solid rgba(255, 255, 255, 0.1); /* Thin white separator */
 }
 
-.footer-bottom p {
-    font-size: 0.85rem;
-    color: var(--footer-text);
+.footer-bottom {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px 0 20px 0; /* Tambahkan padding bawah agar tidak ada putih */
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    background: transparent; /* Pastikan tidak ada background putih */
 }
 
 
@@ -1208,6 +1094,7 @@ h1, h2, h3 {
         font-size: 0.85rem;
         height: auto; /* Allow description to expand on very small screens */
         min-height: unset; /* Remove min-height for doctors */
+        overflow: visible; /* Show full text */
     }
 
     .doctor-info h3, .card-content h3 {
