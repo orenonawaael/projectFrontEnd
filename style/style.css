@@ -1,4 +1,12 @@
 /* --- Global Styles & Resets (Keep these from previous version or add if new) --- */
+html, body {
+    width: 100%;
+    min-width: 100vw;
+    max-width: 100vw;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
@@ -12,6 +20,13 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+    box-sizing: border-box;
+    width: 100%;
+    /* Hapus background-color dan box-shadow jika menyebabkan overflow */
+    background-color: var(--white);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px var(--shadow-color);
+    position: relative;
 }
 
 h1, h2, h3 {
@@ -410,7 +425,6 @@ h1, h2, h3 {
     background-color: var(--white);
     border-radius: 10px;
     box-shadow: 0 4px 15px var(--shadow-color);
-    padding: 40px;
     position: relative; /* For the floating button */
 }
 
@@ -420,7 +434,7 @@ h1, h2, h3 {
     width: fit-content;
     margin: 0 auto 30px auto;
     padding: 10px 25px;
-    background-color: var(--white);
+    background-color: #d86352;
     color: var(--text-color);
     border: 1px solid var(--border-color);
     border-radius: 20px;
@@ -435,26 +449,23 @@ h1, h2, h3 {
     color: var(--white);
     border-color: var(--primary-blue);
 }
-
+/* adaption section */
 .adoption-section {
-    background-color: var(--primary-blue);
+    background: url('https://via.placeholder.com/1200x400/87CEEB/FFFFFF?text=Pet+Care+Background') no-repeat center center/cover;
+    background-size: cover;
     border-radius: 10px;
-    padding: 40px 20px;
+    padding: 20px 20px;
     text-align: center;
-    margin-bottom: 30px;
-    position: relative; /* For the dotted border */
+    margin-bottom: 40px;
+    color: var(--dark-text-blue);
+    position: relative;
+    overflow: hidden;
 }
 
-.adoption-section::before {
-    content: '';
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    right: 20px;
-    bottom: 20px;
-    border: 2px dashed var(--white);
-    border-radius: 8px;
-    pointer-events: none; /* Allows clicks to pass through */
+
+.adoption-section > * {
+    position: relative;
+    z-index: 1;
 }
 
 .section-title {
@@ -472,182 +483,139 @@ h1, h2, h3 {
 
 .animal-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
     justify-content: center;
-    padding: 20px; /* Padding for the grid inside the blue section */
 }
 
 .animal-card {
-    background-color: var(--white);
+    background-color: #142e49 !important;
     border-radius: 10px;
     box-shadow: 0 4px 10px var(--shadow-color);
     overflow: hidden;
-    text-align: left;
+    text-align: center;
     transition: transform 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    min-height: 340px;
+    max-width: 370px;
+    margin: 0 auto;
+    border: none;
+    padding: 0;
 }
 
 .animal-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 16px 32px rgba(44, 62, 80, 0.13);
 }
 
 .animal-card img {
     width: 100%;
-    height: 180px;
-    object-fit: cover;
-    border-bottom: 1px solid var(--border-color);
+    aspect-ratio: 1.2 / 1; /* Atur rasio gambar agar proporsional dengan card */
+    height: auto;
+    min-height: 0;
+    max-height: none;
+    object-fit: contain;
+    display: block;
+    border-radius: 10px 10px 0 0;
+    background: #142e49;
+    box-sizing: border-box;
+    border: none;
+    margin: 0;
+    padding: 0;
 }
 
 .card-content {
-    padding: 15px;
+    flex: 1 1 auto;
+    padding: 18px 18px 10px 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: center;
 }
 
 .card-content h3 {
     font-size: 1.5rem;
     margin-bottom: 10px;
-    color: var(--dark-blue);
+    color: #f4f4f4 !important;
     font-weight: 600;
 }
 
 .card-content p {
     font-size: 0.95rem;
-    color: #666;
+    color: #fff !important;
     margin-bottom: 15px;
-    height: 60px; /* Fixed height for descriptions */
-    overflow: hidden; /* Hide overflow if text is too long */
+    /* tampilkan seluruh deskripsi tanpa dipotong */
+    height: auto;
+    max-height: none;
+    overflow: visible;
+    text-overflow: unset;
+    white-space: normal;
+    text-align: center;
 }
 
 .card-footer {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
-    margin-top: 10px;
+    margin-top: auto;
+    padding-top:8px ;
+    padding-bottom: 8px;
+    gap: 12px;
 }
 
 .btn-detail {
-    padding: 8px 15px;
-    background-color: var(--dark-blue);
-    color: var(--white);
+    margin-right: auto;
+    padding: 7px 18px;
+    background-color: #22304a;
+    color: #fff;
     border: none;
-    border-radius: 5px;
+    border-radius: 6px;
     cursor: pointer;
-    font-size: 0.9rem;
-    transition: background-color 0.3s ease;
+    font-size: 0.97rem;
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(44, 62, 80, 0.07);
+    transition: background 0.2s;
 }
 
 .btn-detail:hover {
-    background-color: #2b6cb0; /* A darker shade of dark-blue */
+    background-color: #3498db;
 }
 
 .location {
+    margin-left: auto;
     font-size: 0.85rem;
-    color: #888;
-}
-
-.floating-button {
-    position: fixed; /* Changed to fixed for true floating behavior */
-    bottom: 30px;
-    right: 30px;
-    width: 60px;
-    height: 60px;
-    background-color: var(--dark-blue);
-    color: var(--white);
-    border-radius: 50%;
+    color: #b0b8c1;
     display: flex;
-    justify-content: center;
     align-items: center;
-    font-size: 2rem;
-    font-weight: 700;
-    box-shadow: 0 4px 10px var(--shadow-color);
-    cursor: pointer;
-    z-index: 1000;
-    transition: background-color 0.3s ease;
+    gap: 4px;
 }
 
-.floating-button:hover {
-    background-color: #2b6cb0;
-}
-
-/* Responsive adjustments */
-@media (max-width: 992px) {
+/* Responsive for mobile */
+@media (max-width: 600px) {
     .animal-grid {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-template-columns: 1fr;
+        gap: 18px;
+        padding: 10px 0;
     }
-
-    .section-title {
-        font-size: 2rem;
+    .animal-card {
+        max-width: 100%;
+        min-height: 0;
     }
-}
-
-@media (max-width: 768px) {
-    .container {
-        padding: 20px;
+    .animal-card img {
+        height: 140px;
     }
-
-    .adoption-section {
-        padding: 30px 15px;
-    }
-
-    .section-title {
-        font-size: 1.8rem;
-        margin-bottom: 30px;
-    }
-
-    .animal-grid {
-        grid-template-columns: 1fr; /* Stack cards on small screens */
-    }
-
-    .floating-button {
-        width: 50px;
-        height: 50px;
-        font-size: 1.8rem;
-        bottom: 20px;
-        right: 20px;
-    }
-
-    .btn-primary-top,
-    .btn-primary-bottom {
-        margin: 0 auto 20px auto;
+    .card-content {
+        padding: 14px 10px 8px 10px;
     }
 }
 
-@media (max-width: 480px) {
-    body {
-        padding: 10px;
-    }
-
-    .container {
-        padding: 15px;
-    }
-
-    .section-title {
-        font-size: 1.5rem;
-    }
-
-    .card-content h3 {
-        font-size: 1.3rem;
-    }
-
-    .card-content p {
-        font-size: 0.9rem;
-        height: auto; /* Allow description to expand on very small screens */
-    }
-
-    .btn-detail {
-        padding: 6px 12px;
-        font-size: 0.8rem;
-    }
-
-    .location {
-        font-size: 0.75rem;
-    }
-}
 /* --- NEW: Cara Merawat Hewan Kesayanganmu Section --- */
     .care-guide-section {
         background: url('https://via.placeholder.com/1200x400/87CEEB/FFFFFF?text=Pet+Care+Background') no-repeat center center/cover; /* Placeholder image */
         background-size: cover;
         border-radius: 10px;
-        padding: 60px 20px;
+        padding: 20px 20px;
         text-align: center;
         margin-bottom: 40px;
         color: var(--dark-text-blue);
@@ -655,16 +623,6 @@ h1, h2, h3 {
         overflow: hidden; /* For rounded corners */
 }
 
-    .care-guide-section::before { /* Overlay for better text readability */
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: linear-gradient(to bottom, rgba(255,255,255,0.7) 0%, rgba(255,255,255,0.9) 100%);
-        z-index: 0;
-}
 
 .care-guide-content {
     position: relative;
@@ -672,10 +630,11 @@ h1, h2, h3 {
 }
 
 .care-guide-title {
-    font-size: 2.8rem;
+    font-size: 2.5rem;
     color: var(--dark-text-blue);
     margin-bottom: 40px;
     font-weight: 700;
+    letter-spacing: 1px;
 }
 
 .care-guide-items {
@@ -702,11 +661,19 @@ h1, h2, h3 {
 }
 
 .care-item img {
-    width: 80px;
-    height: 80px;
-    margin-bottom: 15px;
-    border-radius: 50%; /* If icons are meant to be circular */
-    object-fit: cover;
+    width: 100%;
+    aspect-ratio: 1.2 / 1; /* Samakan rasio dengan card hewan adopsi */
+    height: auto;
+    min-height: 0;
+    max-height: none;
+    object-fit: contain;
+    display: block;
+    border-radius: 10px 10px 0 0;
+    background: #cbbcbc;
+    box-sizing: border-box;
+    border: none;
+    margin: 0;
+    padding: 0;
 }
 
 .care-item h4 {
@@ -723,9 +690,11 @@ h1, h2, h3 {
 
 /* --- NEW: Pelayanan Terbaik Dimulai dari Dokter Terbaik Section --- */
 .doctors-section {
-    padding: 40px 20px;
+    border-radius: 10px;
+    padding: 20px 20px;
     text-align: center;
     margin-bottom: 40px;
+    /* background-color: #c5d7e3; */
 }
 
 .section-title-dark { /* For dark text on light background */
@@ -744,7 +713,7 @@ h1, h2, h3 {
 }
 
 .doctor-card {
-    background-color: var(--white);
+    background-color: #142e49;
     border-radius: 10px;
     box-shadow: 0 4px 10px var(--shadow-color);
     overflow: hidden;
@@ -760,22 +729,25 @@ h1, h2, h3 {
 .doctor-card img {
     width: 150px;
     height: 150px;
-    border-radius: 50%; /* Circular images for doctors */
+    display: block;
+    margin: 0 auto 15px auto;
+    border-radius: 50%;
     object-fit: cover;
-    margin-bottom: 15px;
-    border: 3px solid var(--primary-blue); /* Border around image */
+    border: 4px solid var(--primary-blue);
+    background: #ff0000;
+    box-sizing: border-box;
 }
 
 .doctor-info h3 {
     font-size: 1.4rem;
     margin-bottom: 8px;
-    color: var(--dark-blue);
+    color: #f4f4f4;
     font-weight: 600;
 }
 
 .doctor-info p {
     font-size: 0.9rem;
-    color: #666;
+    color: #ffffff;
     margin-bottom: 15px;
     min-height: 50px; /* Ensure consistent height for descriptions */
     overflow: hidden;
@@ -783,6 +755,20 @@ h1, h2, h3 {
     display: -webkit-box;
     
     -webkit-box-orient: vertical;
+}
+.card-footer span {
+    font-size: 0.85rem;
+    color: #ffffff; /* Lighter text for footer */
+}
+.card-footer button {
+    background-color: var(--primary-blue);
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
 }
 
 /* Re-using existing card-footer and location styles */
@@ -794,23 +780,32 @@ h1, h2, h3 {
 }
 
 
+
 /* --- Existing: Animal Adoption Section (retained) --- */
 .animal-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
     justify-content: center;
-    padding: 20px; /* Padding for the grid inside the blue section */
 }
 
 .animal-card {
-    background-color: var(--white);
+    width: 100%;
+    background-color: #142e49 ;
     border-radius: 10px;
     box-shadow: 0 4px 10px var(--shadow-color);
     overflow: hidden;
-    text-align: left;
+    text-align: center;
     transition: transform 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    min-height: 340px;
+    max-width: 370px;
+    margin: 0 auto;
+    border: none;
+    padding: 0;
 }
+
 
 .animal-card:hover {
     transform: translateY(-5px);
@@ -818,13 +813,21 @@ h1, h2, h3 {
 
 .animal-card img {
     width: 100%;
-    height: 180px;
+    height: auto;
+    min-height: 0;
+    max-height: none;
     object-fit: cover;
-    border-bottom: 1px solid var(--border-color);
+    display: block;
+    border-radius: 10px 10px 0 0;
+    box-sizing: border-box;
+    border: none;
+    margin: 0;
+    padding: 0;
 }
 
 .card-content {
     padding: 15px;
+    text-align: center;
 }
 
 .card-content h3 {
@@ -835,23 +838,30 @@ h1, h2, h3 {
 }
 
 .card-content p {
-    font-size: 0.95rem;
-    color: #666;
+    font-size: 0.90rem;
     margin-bottom: 15px;
-    height: 60px; /* Fixed height for descriptions */
-    overflow: hidden; /* Hide overflow if text is too long */
+    /* tampilkan seluruh deskripsi tanpa dipotong */
+    height: auto;
+    max-height: none;
+    overflow: visible;
+    text-overflow: unset;
+    white-space: normal;
+    text-align: center;
 }
 
 .card-footer {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
-    margin-top: 10px;
+    margin-top: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    gap: 12px;
 }
 
 .location {
     font-size: 0.85rem;
-    color: #888;
+    color: #ffffff;
 }
 
 .floating-button {
@@ -880,46 +890,66 @@ h1, h2, h3 {
 
 /* --- NEW: Footer Styles --- */
 .main-footer {
-    background-color: var(--footer-bg);
-    color: var(--footer-text);
-    padding: 40px 20px 20px; /* Adjusted padding */
-    margin-top: 50px; /* Space above footer */
+    background-color: #142e49;
+    padding: 40px 0 0 0;
+    margin-top: 50px;
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    box-sizing: border-box;
 }
 
 .footer-content {
     display: flex;
-    flex-wrap: wrap; /* Allow columns to wrap */
+    flex-wrap: wrap;
     justify-content: space-between;
     max-width: 1200px;
     margin: 0 auto;
-    gap: 30px; /* Space between columns */
+    gap: 40px;
+    padding: 40px 30px 0 30px;
 }
 
 .footer-column {
-    flex: 1; /* Allow columns to grow and shrink */
-    min-width: 200px; /* Minimum width before wrapping */
+    flex: 1;
+    min-width: 180px;
+    margin-bottom: 0;
 }
 
 .footer-brand {
-    flex: 1.2; /* Brand column slightly larger */
-    min-width: 250px;
+    flex: 1.2;
+    min-width: 220px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
 }
 
 .footer-logo {
-    width: 150px; /* Adjust as needed */
+    width: 90px;
     height: auto;
-    margin-bottom: 15px;
+    margin-bottom: 18px;
+}
+
+.footer-brand p {
+    font-size: 1em;
+    color: #e0e6ed;
+    margin: 0;
+    margin-bottom: 0;
+    line-height: 1.5;
 }
 
 .footer-column h4 {
-    color: var(--white);
-    font-size: 1.2rem;
-    margin-bottom: 20px;
-    font-weight: 600;
+    color: #fff;
+    font-size: 1.1rem;
+    margin-bottom: 18px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
 }
 
 .footer-column ul {
     list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 .footer-column ul li {
@@ -927,199 +957,122 @@ h1, h2, h3 {
 }
 
 .footer-column ul li a {
-    color: var(--footer-text);
+    color: #e0e6ed;
     text-decoration: none;
-    transition: color 0.3s ease;
+    transition: color 0.3s;
+    font-weight: 400;
+    font-size: 1em;
 }
 
 .footer-column ul li a:hover {
-    color: var(--primary-blue);
+    color: #4ea1e3;
 }
 
 .footer-contact ul li {
     display: flex;
-    align-items: flex-start; /* Align icon and text at the top */
+    align-items: flex-start;
+    gap: 8px;
+    margin-bottom: 8px;
+    color: #e0e6ed;
+    font-size: 1em;
 }
 
 .footer-contact ul li i {
-    margin-right: 10px;
-    font-size: 1rem;
-    margin-top: 3px; /* Adjust vertical alignment of icon */
-    color: var(--primary-blue); /* Make icons blue */
+    color: #ffffff;
+    font-size: 1.1em;
+    margin-top: 2px;
 }
-
 
 .social-icons {
     display: flex;
-    gap: 15px;
-    margin-top: 10px; /* Space between title and icons */
+    gap: 18px;
+    margin-top: 8px;
 }
 
 .social-icons a {
-    color: var(--white); /* White icons */
-    font-size: 1.5rem;
-    transition: color 0.3s ease;
+    color: #fff;
+    font-size: 1.4rem;
+    transition: color 0.3s;
 }
 
 .social-icons a:hover {
-    color: var(--primary-blue); /* Blue on hover */
+    color: #4ea1e3;
 }
 
 .footer-bottom {
     text-align: center;
-    margin-top: 40px;
-    padding-top: 20px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1); /* Thin white separator */
+    margin-top: 32px;
+    padding: 18px 0 24px 0;
+    border-top: 3px solid #ffffff;
+    background: transparent;
+    font-size: 0.95em;
+    color: #b0b8c1;
+    letter-spacing: 0.5px;
 }
 
-.footer-bottom p {
-    font-size: 0.85rem;
-    color: var(--footer-text);
-}
 
 
-/* Responsive adjustments */
 @media (max-width: 992px) {
-    .care-guide-title, .section-title-dark, .section-title {
-        font-size: 2.2rem;
-    }
-    .doctor-grid {
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    }
-    .animal-grid {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    }
     .footer-content {
-        flex-direction: column; /* Stack footer columns */
+        flex-direction: column;
         align-items: center;
         text-align: center;
+        gap: 24px;
+        padding: 32px 10vw 0 10vw;
     }
-    .footer-column {
-        min-width: unset; /* Remove min-width for stacking */
-        width: 100%; /* Take full width when stacked */
-        margin-bottom: 30px; /* Add space between stacked columns */
-    }
-    .footer-column:last-child {
+    .footer-column,
+    .footer-brand {
+        align-items: center;
+        min-width: 0;
+        width: 100%;
         margin-bottom: 0;
     }
-    .footer-brand .footer-logo {
-        margin: 0 auto 15px auto; /* Center logo when stacked */
+    .footer-logo {
+        margin: 0 auto 18px auto;
+    }
+    .footer-brand p {
+        text-align: center;
     }
     .social-icons {
-        justify-content: center; /* Center social icons */
+        justify-content: center;
     }
     .footer-contact ul li {
-        justify-content: center; /* Center contact info */
+        justify-content: center;
     }
 }
 
-@media (max-width: 768px) {
-    .container {
-        padding: 20px;
-    }
-
-    .care-guide-section {
-        padding: 40px 15px;
-    }
-
-    .care-guide-title, .section-title-dark, .section-title {
-        font-size: 1.8rem;
-        margin-bottom: 30px;
-    }
-
-    .care-guide-items {
-        flex-direction: column; /* Stack items on small screens */
-        align-items: center;
-    }
-
-    .care-item {
-        max-width: 90%; /* Adjust width for stacked items */
-        margin-bottom: 20px;
-    }
-
-    .doctors-section {
-        padding: 30px 15px;
-    }
-
-    .doctor-grid, .animal-grid {
-        grid-template-columns: 1fr; /* Stack cards on small screens */
-    }
-
-    .floating-button {
-        width: 50px;
-        height: 50px;
-        font-size: 1.8rem;
-        bottom: 20px;
-        right: 20px;
-    }
-
-    .btn-primary-top,
-    .btn-primary-bottom {
-        margin: 0 auto 20px auto;
-    }
-
+@media (max-width: 600px) {
     .main-footer {
-        padding: 30px 15px 15px;
+        padding: 24px 0 0 0;
+        border-radius: 0;
+    }
+    .footer-content {
+        padding: 24px 4vw 0 4vw;
+        gap: 16px;
+    }
+    .footer-logo {
+        width: 60px;
+    }
+    .footer-column h4 {
+        font-size: 1em;
+    }
+    .footer-column ul li a,
+    .footer-bottom {
+        font-size: 0.95em;
+    }
+    .social-icons a {
+        font-size: 1.1em;
     }
 }
 
-@media (max-width: 480px) {
-    body {
-        padding: 10px;
+@media (max-width: 400px) {
+    .footer-logo {
+        width: 40px;
     }
-
-    .container {
-        padding: 15px;
-    }
-
-    .care-guide-title, .section-title-dark, .section-title {
-        font-size: 1.5rem;
-    }
-
-    .care-item h4 {
-        font-size: 1.1rem;
-    }
-
-    .care-item p, .doctor-info p, .card-content p {
-        font-size: 0.85rem;
-        height: auto; /* Allow description to expand on very small screens */
-        min-height: unset; /* Remove min-height for doctors */
-        overflow: visible; /* Show full text */
-    }
-
-    .doctor-info h3, .card-content h3 {
-        font-size: 1.2rem;
-    }
-
-    .btn-detail {
-        padding: 6px 12px;
-        font-size: 0.8rem;
-    }
-
-    .location {
-        font-size: 0.75rem;
-    }
-
-    .doctor-card img {
-        width: 120px;
-        height: 120px;
-    }
-
     .footer-column h4 {
-        font-size: 1.1rem;
+        font-size: 0.95em;
     }
-
-    .footer-column ul li a, .footer-bottom p {
-        font-size: 0.8rem;
-    }
-
-    .footer-contact ul li {
-        flex-direction: column; /* Stack icon and text for better readability */
-        align-items: center;
-    }
-
-    .footer-contact ul li i {
-        margin-right: 0;
-        margin-bottom: 5px;
+    .footer-bottom {
+        font-size: 0.8em;
     }
 }
