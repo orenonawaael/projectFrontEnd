@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Furry.id</title>
+    <!-- Anda bisa membuat file CSS baru atau menggunakan yang sudah ada -->
+    <link rel="stylesheet" href="style/cssSignUp.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+    <!-- Jika Anda tidak menggunakan Bootstrap, baris di bawah ini bisa dihapus -->
+    <link rel="stylesheet" href="bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <script src="bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="header-content">
+            <div class="logo">
+                <img src="image/Furry.id Logo Horizontal Berwarna.png" alt="Furry.id Logo">
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#">Layanan Kami</a></li>
+                    <li><a href="#">Hewan Adopsi</a></li>
+                    <li><a href="#">Tentang Kami</a></li>
+                    <li><a href="#">Kontak</a></li>
+                </ul>
+            </nav>
+            <div class="auth-buttons">
+                <!-- Tombol Sign Up sekarang aktif -->
+                <a href="signup.html" class="btn btn-primary-filled">Sign Up</a>
+                <a href="signin.html" class="btn btn-primary-outline">Sign In</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Bagian Sign Up -->
+    <main class="login-container">
+        <!-- Menggunakan kelas yang sama agar style konsisten -->
+        <div class="login-card">
+            <h2>Sign Up</h2>
+            <p class="tagline">Buat akun barumu dan temukan sahabat berbulu!</p>
+            <form action="#" method="post">
+                <div class="form-group">
+                    <label for="nama_lengkap">Nama Lengkap</label>
+                    <input type="text" id="nama_lengkap" name="nama_lengkap" placeholder="Masukkan nama lengkap Anda" required>
+                </div>
+                 <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" placeholder="Masukkan e-mail aktif Anda" required>
+                </div>
+                <div class="form-group">
+                   <label for="notelpon">No.Telp</label>
+                   <input type="text" id="notelpon" name="notelpon" placeholder="Masukkan nomor telpon aktif Anda" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Buat password minimal 8 karakter" required>
+                </div>
+                <div class="form-group">
+                    <label for="confirm_password">Konfirmasi Password</label>
+                    <input type="password" id="confirm_password" name="confirm_password" placeholder="Ulangi password Anda" required>
+                </div>
+                
+                <div class="register-link">
+                    Sudah punya akun? <a href="signin.html">Masuk Sekarang</a>
+                </div>
+                
+                <button type="submit" class="btn-submit">Daftar</button>
+            </form>
+        </div>
+    </main>
+
+    <!-- Footer (Sama seperti halaman signin) -->
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-column footer-brand">
+                <img src="image/Frame 44.png" alt="FURRY.ID Logo" class="footer-logo">
+                <p>Platform adopsi hewan terpercaya yang menghubungkan sahabat berbulu dengan rumah baru penuh cinta</p>
+             </div>
+            <div class="footer-column footer-navigasi">
+                <h4>Navigasi</h4>
+                <ul>
+                    <li><a href="#">Beranda</a></li>
+                    <li><a href="#">Tentang Kami</a></li>
+                    <li><a href="#">Cari Hewan</a></li>
+                    <li><a href="#">Posting Hewan</a></li>
+                    <li><a href="#">Adopsi Hewan</a></li>
+                </ul>
+            </div>
+            <div class="footer-column footer-bantuan">
+                <h4>Bantuan & Dukungan</h4>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Panduan Adopsi</a></li>
+                    <li><a href="#">Kebijakan Privasi</a></li>
+                    <li><a href="#">Syarat & Ketentuan</a></li>
+                </ul>
+            </div>
+            <div class="footer-column footer-contact-social">
+                <div class="footer-social-media">
+                    <h4>Media Sosial</h4>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-contact">
+                    <h4>Kontak</h4>
+                    <ul>
+                        <li><i class="fa-regular fa-envelope"></i> furry@email.com</li>
+                        <li><i class="fas fa-phone-alt"></i> 0812-3456-7890</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Semarang, Jawa Tengah</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy;2025 Furry.id | All Rights Reserved</p>
+        </div>
+    </footer>
+
+</body>
+</html>
