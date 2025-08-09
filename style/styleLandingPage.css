@@ -62,12 +62,16 @@ h1, h2, h3 {
 }
 
 .btn-primary-filled {
-    background-color: #3498db; /* Biru */
+    background-color:transparent;
     color: #fff;
-    border: 1px solid #3498db;
+    border: 1px solid #ffffff;
 }
 
 .btn-primary-filled:hover {
+    background-color: #2980b9;
+    border-color: #2980b9;
+}
+.btn-primary-outline:hover {
     background-color: #2980b9;
     border-color: #2980b9;
 }
@@ -256,10 +260,23 @@ h1, h2, h3 {
 
 /* --- Pet Categories Section --- */
 .pet-categories-section {
-    padding: 60px 0;
-    background-color: #a82a2a; /* Harus sama dengan warna fill wave */
+    background-size: cover;
+    border-radius: 10px;
+    padding: 20px 20px;
+    text-align: center;
+    margin-bottom: 40px;
+    color: var(--dark-text-blue);
     position: relative; /* Penting karena wave ada di atasnya */
-    z-index: 2; /* Agar di bawah wave */
+    overflow: hidden; /* Untuk sudut yang melengkung */
+    /* background-color: #a82a2a; Harus sama dengan warna fill wave */
+}
+.categories-tittle{
+    font-size: 2.5rem;
+    color: var(--dark-text-blue);
+    margin-bottom: 40px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-align: center; /* Pusatkan judul */
 }
 
 .categories-grid {
@@ -458,7 +475,6 @@ h1, h2, h3 {
 }
 /* adaption section */
 .adoption-section {
-    background: url('https://via.placeholder.com/1200x400/87CEEB/FFFFFF?text=Pet+Care+Background') no-repeat center center/cover;
     background-size: cover;
     border-radius: 10px;
     padding: 20px 20px;
@@ -467,7 +483,7 @@ h1, h2, h3 {
     color: var(--dark-text-blue);
     position: relative;
     overflow: hidden;
-    background-color: #3498db;
+    /* background-color: #3498db; */
 }
 
 
@@ -629,7 +645,7 @@ h1, h2, h3 {
         color: var(--dark-text-blue);
         position: relative;
         overflow: hidden; /* For rounded corners */
-        background-color: #3498db;
+        /* background-color: #3498db; */
 }
 
 
@@ -647,7 +663,7 @@ h1, h2, h3 {
 }
 
 .care-guide-items {
-    background: #3498db;
+    /* background: #3498db; */
     padding: 32px 0;
     border-radius: 10px;
     display: flex;
@@ -706,7 +722,7 @@ h1, h2, h3 {
     padding: 20px 20px;
     text-align: center;
     margin-bottom: 40px;
-    background-color: #3498db;
+    /* background-color: #3498db; */
 }
 
 .section-title-dark { /* For dark text on light background */
