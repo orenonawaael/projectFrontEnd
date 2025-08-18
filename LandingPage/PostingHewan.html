@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posting Hewan - FURRY.ID</title>
+    <link rel="stylesheet" href="../style/PostingHewan.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="header-content">
+            <a href="#" class="logo">
+                <img src="../image/Furry.id Logo Horizontal Berwarna.png" alt="Furry.id Logo">
+            </a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#">Beranda</a></li>
+                    <li><a href="#">Tentang Kami</a></li>
+                    <li><a href="#">Layanan Kami</a></li>
+                    <li><a href="#">Kontak</a></li>
+                </ul>
+            </nav>
+            <div class="auth-buttons">
+                <a href="../signup.html" class="btn btn-primary-outline">Sign Up</a>
+                <a href="../signin.html" class="btn btn-primary-filled">Sign In</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="posting-main">
+        <section class="posting-section">
+            <div class="posting-container">
+                <div class="posting-card">
+                    <div class="posting-header">
+                        <h2>Bantu sahabat <span class="highlight">Berbulu</span> menemukan <span class="highlight">Rumah Baru</span></h2>
+                        <p>Dengan satu postingan, kamu bisa mengubah hidup mereka selamanya. Rumah baru, harapan baru.</p>
+                    </div>
+
+                    <form class="posting-form">
+                        <div class="form-group">
+                            <label for="nama-hewan">Nama Hewan</label>
+                            <input type="text" id="nama-hewan" name="nama-hewan" placeholder="Contoh: Rocky (Anjing Golden Retriever)">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="alamat">Alamat</label>
+                            <input type="text" id="alamat" name="alamat" placeholder="Masukkan Alamat Anda">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="telp">No. Telp / Handphone</label>
+                            <input type="tel" id="telp" name="telp" placeholder="Masukkan No. Telp/ Handphone">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="foto">Unggah Foto</label>
+                            <div class="file-upload-box">
+                                <input type="file" id="foto" name="foto">
+                                <span class="placeholder-text">No file chosen</span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="jenis-kelamin">Jenis Kelamin</label>
+                            <select id="jenis-kelamin" name="jenis-kelamin">
+                                <option value="" disabled selected>Pilih Jenis Kelamin</option>
+                                <option value="jantan">Jantan</option>
+                                <option value="betina">Betina</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="harga">Harga</label>
+                            <input type="text" id="harga" name="harga" placeholder="Masukkan Harga">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="deskripsi">Deskripsi</label>
+                            <textarea id="deskripsi" name="deskripsi" rows="5" placeholder="Deskripsikan kondisi hewan Anda seperti: tanggal lahir, makanan kesukaan, dll"></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="jenis-adopsi">Jenis Adopsi</label>
+                            <select id="jenis-adopsi" name="jenis-adopsi">
+                                <option value="" disabled selected>Pilih Jenis Adopsi</option>
+                                <option value="Gratis">Gratis</option>
+                                <option value="Bayar">Bayar</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button type="reset" class="btn btn-secondary-outline">Clear All</button>
+                            <button type="submit" class="btn btn-primary-filled">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <img src="../image/Frame 44.png" alt="FURRY.ID Logo" class="footer-logo">
+                <p>Platform adopsi hewan terpercaya yang menghubungkan sahabat berbulu dengan rumah baru penuh cinta</p>
+            </div>
+            <div class="footer-column">
+                <h4>Navigasi</h4>
+                <ul>
+                    <li><a href="#">Beranda</a></li>
+                    <li><a href="#">Tentang Kami</a></li>
+                    <li><a href="#">Cari Hewan</a></li>
+                    <li><a href="#">Posting Hewan</a></li>
+                    <li><a href="#">Adopsi Hewan</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Bantuan & Dukungan</h4>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Panduan Adopsi</a></li>
+                    <li><a href="#">Kebijakan Privasi</a></li>
+                    <li><a href="#">Syarat & Ketentuan</a></li>
+                </ul>
+            </div>
+            <div class="footer-column footer-contact">
+                <h4>Kontak</h4>
+                <ul>
+                    <li><i class="fas fa-envelope"></i> furry@email.com</li>
+                    <li><i class="fas fa-phone"></i> 0812-3456-7890</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Semarang, Jawa Tengah</li>
+                </ul>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy;2025 Furry.id | All Rights Reserved
+        </div>
+    </footer>
+
+</body>
+</html>

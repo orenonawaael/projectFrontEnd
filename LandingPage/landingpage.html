@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Furry.id - Temukan Teman Berbulu Anda</title>
-    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../style/styleLandingPage.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
     <script src="bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
 </head>
 <body>
@@ -20,13 +21,13 @@
                 <ul>
                     <li><a href="#">Layanan Kami</a></li>
                     <li><a href="#">Hewan Adopsi</a></li>
-                    <li><a href="#">Tentang Kami</a></li>
+                    <li><a href="../TentangKami.html">Tentang Kami</a></li>
                     <li><a href="#">Kontak</a></li>
                 </ul>
             </nav>
             <div class="auth-buttons">
-                <a href="#" class="btn btn-primary-outline">Sign Up</a>
-                <a href="#" class="btn btn-primary-filled">Sign In</a>
+                <a href="../signup.html" class="btn btn-primary-outline">Sign Up</a>
+                <a href="../signin.html" class="btn btn-primary-filled">Sign In</a>
             </div>
         </div>
     </header>
@@ -40,7 +41,7 @@
             </div>
             <div class="cta-buttons">
                 <a href="#" class="btn btn-cta">Adopsi Hewan</a>
-                <a href="#" class="btn btn-cta">Adopsi Hewan</a>
+                <a href="PostingHewan.html" class="btn btn-cta">Posting Hewan</a>
             </div>
         </div>
         <div class="wave-shape">
@@ -49,25 +50,27 @@
             </svg>
         </div>
     </section>
-
-    <section class="pet-categories-section">
-        <div class="container categories-grid">
-            <div class="category-card">
-                <img src="../image/kucing.png" alt="Kucing">
-                <div class="category-name">Kucing</div>
-            </div>
-            <div class="category-card">
-                <img src="../image/anjing.png" alt="Anjing">
-                <div class="category-name">Anjing</div>
-            </div>
-            <div class="category-card">
-                <img src="../image/burung.png" alt="Burung">
-                <div class="category-name">Burung</div>
-            </div>
-            <div class="category-card">
-                <img src="../image/kurakura.png" alt="Kura kura">
-                <div class="category-name">Kura kura</div>
-            </div>
+    
+    <div class="container">
+        <section class="pet-categories-section">
+            <h1 class="categories-tittle">Kategori Hewan</h1>
+            <div class="container categories-grid">
+                <div class="category-card">
+                    <img src="../image/kucing.png" alt="Kucing">
+                    <div class="category-name">Kucing</div>
+                </div>
+                <div class="category-card">
+                    <img src="../image/anjing.png" alt="Anjing">
+                    <div class="category-name">Anjing</div>
+                </div>
+                <div class="category-card">
+                    <img src="../image/burung.png" alt="Burung">
+                    <div class="category-name">Burung</div>
+                </div>
+                <div class="category-card">
+                    <img src="../image/kurakura.png" alt="Kura kura">
+                    <div class="category-name">Kura kura</div>
+                </div>
             </div>
     </section>
 
@@ -105,7 +108,7 @@
                     <img src="../image/lovebird.png" alt="Lovebird">
                     <div class="card-content">
                         <h3>Lovebird</h3>
-                        <p>Berwarna-warni dan suka bersosialisasi. Suara kicauannya nyaring, cocok sebagai burung hias dan teman bermain.</p>
+                        <p>Berwarna-warni dan suka bersosialisasi. Suara kicauannya nyaring, cocok sebagai burung hias.</p>
                         <div class="card-footer">
                             <button class="btn-detail">Lihat Detail</button>
                             <span class="location">Semarang</span>
@@ -150,7 +153,7 @@
                 </div>
 
                 <div class="animal-card">
-                    <img src="../image/Bulldog.png" alt="Bulldog">
+                    <img src="../image/Bulldog.png" alt="Bulldog" style="width: 100%; height: auto;">
                     <div class="card-content">
                         <h3>Bulldog</h3>
                         <p>Berwajah keriput dan bertubuh kekar. Tenang dan sangat setia pada pemiliknya.</p>
@@ -197,17 +200,17 @@
                 <h2 class="care-guide-title">Cara Merawat Hewan Kesayanganmu</h2>
                 <div class="care-guide-items">
                     <div class="care-item">
-                        <img src="https://via.placeholder.com/80x80/ADD8E6/FFFFFF?text=💖" alt="Love Icon">
-                        <h4>Lumpurkan waktu dan kasih sayang</h4>
+                        <img src="../image/kasihsayang.png" alt="Love Icon">
+                        <h4>Luangkan waktu dan kasih sayang</h4>
                         <p>Pastikan hewan peliharaan Anda mendapatkan perhatian dan interaksi yang cukup setiap hari.</p>
                     </div>
                     <div class="care-item">
-                        <img src="https://via.placeholder.com/80x80/ADD8E6/FFFFFF?text=🍲" alt="Food Icon">
+                        <img src="../image/makanan.png" alt="Food Icon">
                         <h4>Beri makanan bergizi dan air bersih setiap hari</h4>
                         <p>Nutrisi yang tepat adalah kunci kesehatan. Sediakan selalu air bersih yang segar.</p>
                     </div>
                     <div class="care-item">
-                        <img src="https://via.placeholder.com/80x80/ADD8E6/FFFFFF?text=🧼" alt="Clean Icon">
+                        <img src="../image/mandi.png" alt="Clean Icon">
                         <h4>Jaga kebersihan dan cek kesehatan secara rutin</h4>
                         <p>Grooming teratur dan kunjungan rutin ke dokter hewan mencegah masalah kesehatan.</p>
                     </div>
@@ -222,7 +225,7 @@
                     <img src="../image/drh. Angela M. Wijiseti.png" alt="drh. Angela M. Wijiseti">
                     <div class="doctor-info">
                         <h3>drh. Angela M. Wijiseti</h3>
-                        <p>Lulusan Fakultas Kedokteran Hewan UGM. Berpengalaman lebih dari 5 tahun di klinik hewan kecil.</p>
+                        <p>Berpengalaman lebih dari 5 tahun di klinik hewan kecil.</p>
                         <div class="card-footer">
                             <button class="btn-detail">Lihat Detail</button>
                             <span class="location">Semarang</span>
@@ -258,7 +261,7 @@
                     <img src="../image/drh. Riza Akmal.png" alt="drh. Riza Akmal">
                     <div class="doctor-info">
                         <h3>drh. Riza Akmal</h3>
-                        <p>Spesialis penanganan penyakit dalam pada anjing & kucing. Konsultan nutrisi hewan peliharaan.</p>
+                        <p>Spesialis penanganan penyakit dalam pada anjing & kucing.</p>
                         <div class="card-footer">
                             <button class="btn-detail">Lihat Detail</button>
                             <span class="location">Semarang</span>
@@ -291,20 +294,22 @@
                 </div>
             </div>
         </section>
-        <footer class="main-footer">
+    </div>
+    <!-- Tutup .container sebelum footer -->
+    <footer class="main-footer">
         <div class="footer-content">
             <div class="footer-column footer-brand">
                 <img src="../image/Frame 44.png" alt="FURRY.ID Logo" class="footer-logo">
                 <p>Platform adopsi hewan terpercaya yang menghubungkan sahabat berbulu dengan rumah baru penuh cinta</p>
-            </div>
+             </div>
 
             <div class="footer-column footer-navigasi">
                 <h4>Navigasi</h4>
                 <ul>
                     <li><a href="#">Beranda</a></li>
-                    <li><a href="#">Tentang Kami</a></li>
+                    <li><a href="../TentangKami.html">Tentang Kami</a></li>
                     <li><a href="#">Cari Hewan</a></li>
-                    <li><a href="#">Posting Hewan</a></li>
+                    <li><a href="PostingHewan.html">Posting Hewan</a></li>
                     <li><a href="#">Adopsi Hewan</a></li>
                 </ul>
             </div>
@@ -314,8 +319,8 @@
                 <ul>
                     <li><a href="#">FAQ</a></li>
                     <li><a href="#">Panduan Adopsi</a></li>
-                    <li><a href="#">Kebijakan Privasi</a></li>
-                    <li><a href="#">Syarat & Ketentuan</a></li>
+                    <li><a href="../KebijakanPrivasi.html">Kebijakan Privasi</a></li>
+                    <li><a href="../SyaratKet.html">Syarat & Ketentuan</a></li>
                 </ul>
             </div>
 
@@ -327,21 +332,20 @@
                         <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
                         <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
                         <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
                     </div>
                 </div>
                 <div class="footer-contact">
                     <h4>Kontak</h4>
                     <ul>
-                        <li><i class="fas fa-envelope"></i> furry@email.com</li>
+                        <li><i class="fa-regular fa-envelope "></i> furry@email.com</li>
                         <li><i class="fas fa-phone-alt"></i> 0812-3456-7890</li>
                         <li><i class="fas fa-map-marker-alt"></i> Semarang, Jawa Tengah</li>
                     </ul>
                 </div>
             </div>
         </div>
-        <div class="footer-bottom">
-            <hr>
+            <div class="footer-bottom">
             <p>&copy;2025 Furry.id | All Rights Reserved</p>
         </div>
     </footer>
