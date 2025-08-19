@@ -1,0 +1,290 @@
+:root {
+    --primary-blue: #3498db;
+    --dark-blue: #142e49;
+    --light-bg: #f8f8f8;
+    --white: #ffffff;
+    --dark-text: #2c3e50;
+    --gray-text: #7f8c8d;
+    --red-accent: #e74c3c;
+    --shadow-light: rgba(0, 0, 0, 0.1);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #e0f2f1, #b2ebf2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Dashboard Layout */
+.dashboard-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    max-width: 1400px;
+    max-height: 900px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    background-color: var(--white);
+    overflow: hidden;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    width: 280px;
+    background-color: var(--dark-blue);
+    color: var(--white);
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.logo-furry img {
+    width: 150px;
+    margin-bottom: 40px;
+}
+
+.sidebar-nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.nav-item {
+    margin-bottom: 10px;
+}
+
+.nav-item a {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    color: #b0b8c1;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1em;
+    border-radius: 10px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.nav-item a i {
+    margin-right: 15px;
+    font-size: 1.2em;
+}
+
+.nav-item a:hover {
+    background-color: #2b3e51;
+    color: var(--white);
+}
+
+.nav-item.active a {
+    background-color: var(--primary-blue);
+    color: var(--white);
+}
+
+/* Perbaikan untuk membuat warna biru penuh */
+.sidebar-nav {
+    margin: 0 -20px; /* Negatif margin untuk menutupi padding sidebar */
+}
+
+.nav-item.active {
+    background-color: var(--primary-blue);
+}
+
+.nav-item.active a {
+    background-color: transparent; /* Ubah latar belakang tautan menjadi transparan */
+    color: var(--white); /* Pastikan teks tetap putih */
+    border-radius: 0; /* Hapus border-radius jika ingin sudut siku */
+    padding-left: 40px; /* Tambah padding kiri untuk teks */
+}
+/* Akhir perbaikan */
+
+.sidebar-logout a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 20px;
+    color: #e0e6ed;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1em;
+    transition: color 0.2s;
+    margin-top: auto;
+}
+
+.sidebar-logout a i {
+    margin-right: 15px;
+}
+
+.sidebar-logout a:hover {
+    color: var(--red-accent);
+}
+
+/* Main Content Styling */
+.main-content {
+    flex-grow: 1;
+    padding: 40px;
+    background-color: #f8f8f8;
+    position: relative;
+    overflow-y: auto;
+}
+
+.account-info-card {
+    background-color: var(--white);
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 4px 20px var(--shadow-light);
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.account-info-card h2 {
+    font-size: 2.2em;
+    font-weight: 700;
+    color: var(--dark-text);
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.account-profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.profile-picture {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: #f1f1f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.profile-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.profile-details {
+    width: 100%;
+    max-width: 450px;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.9em;
+    color: var(--gray-text);
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1em;
+    color: var(--dark-text);
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--primary-blue);
+}
+
+.btn-save {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: var(--primary-blue);
+    color: var(--white);
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-save:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .dashboard-container {
+        flex-direction: column;
+        max-width: 100%;
+        max-height: 100%;
+        border-radius: 0;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        padding: 20px;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .logo-furry {
+        display: none;
+    }
+
+    .sidebar-nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav-item a {
+        padding: 10px 15px;
+        font-size: 0.9em;
+    }
+
+    .nav-item a i {
+        margin-right: 8px;
+    }
+
+    .sidebar-logout {
+        margin-top: 20px;
+        width: 100%;
+    }
+
+    .main-content {
+        padding: 20px;
+    }
+
+    .account-info-card {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .account-profile {
+        gap: 20px;
+    }
+}
