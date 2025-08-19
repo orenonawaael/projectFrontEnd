@@ -134,6 +134,44 @@ h1, h2, h3 {
     gap: 10px; /* Jarak antar tombol */
 }
 
+/* Dropdown Menu Styling */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    z-index: 100;
+    min-width: 180px;
+    margin-top: 10px;
+    overflow: hidden;
+}
+
+.dropdown-item {
+    display: block;
+    padding: 12px 16px;
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    border-bottom: 1px solid #eee;
+    transition: background-color 0.2s ease;
+}
+
+.dropdown-item:last-child {
+    border-bottom: none;
+}
+
+.dropdown-item:hover {
+    background-color: #f1f1f1;
+}
+
+/* Show dropdown on hover */
+.user-profile-dropdown:hover .dropdown-menu {
+    display: block;
+}
+
 /* --- Hero Section (New Design) --- */
 .hero-new-design {
     background-image: url('../image/background-hero.jpg'); /* Ganti dengan gambar background Anda */
