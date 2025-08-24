@@ -4,14 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Furry.id - Temukan Teman Berbulu Anda</title>
-    <link rel="stylesheet" href="../style/styleLandingPage.css">
+    <link rel="stylesheet" href="styleLandingPage.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="bootstrap-5.3.3-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
     <script src="bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
+  
 </head>
 <body>
-
+    <div class="gradient-showcase gradient-coral-glow">
+    </div>
+    <!-- NavBar Top -->
     <header class="main-header">
         <div class="container header-content">
             <div class="logo">
@@ -19,10 +22,10 @@
             </div>
             <nav class="main-nav">
                 <ul>
-                    <li><a href="#">Layanan Kami</a></li>
-                    <li><a href="#">Hewan Adopsi</a></li>
-                    <li><a href="#">Tentang Kami</a></li>
-                    <li><a href="#">Kontak</a></li>
+                    <li><a href="#hero-new-design">Home</a></li>
+                    <li><a href="#adoption-section">Hewan Adopsi</a></li>
+                    <li><a href="#about-section">Tentang Kami</a></li>
+                    <li><a href="#main-footer">Kontak</a></li>
                 </ul>
             </nav>
             <div class="auth-buttons">
@@ -31,8 +34,11 @@
             </div>
         </div>
     </header>
+    <!-- End NavBar Top -->
 
-    <section class="hero-new-design">
+    <!-- Hero Section Start -->
+     
+    <section id=hero-new-design" class="hero-new-design">
         <div class="container hero-new-content">
             <h1>Lorem Ipsum</h1>
             <div class="search-bar">
@@ -41,17 +47,21 @@
             </div>
             <div class="cta-buttons">
                 <a href="#" class="btn btn-cta">Adopsi Hewan</a>
-                <a href="#" class="btn btn-cta">Adopsi Hewan</a>
+                <a href="#" class="btn btn-cta">Posting Hewan</a>
             </div>
         </div>
-        <div class="wave-shape">
+        <!-- <div class="wave-shape">
             <svg viewBox="0 0 1440 320" preserveAspectRatio="none">
-                <path fill="#f8f8f8" fill-opacity="1" d="M0,192L48,176C96,160,192,128,288,106.7C384,85,480,75,576,90.7C672,107,768,149,864,165.3C960,181,1056,171,1152,154.7C1248,139,1344,117,1392,106.7L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
-            </svg>
+                <path fill="rgba(251, 174, 84, 1)" fill-opacity="1" d="M0,192L48,176C96,160,192,128,288,106.7C384,85,480,75,576,90.7C672,107,768,149,864,165.3C960,181,1056,171,1152,154.7C1248,139,1344,117,1392,106.7L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+            </svg> -->
         </div>
     </section>
+    <!-- Hero Section End -->
     
+    <!-- Kategori Hewan dan Hewan Adopsi -->
     <div class="container">
+     
+        
         <section class="pet-categories-section">
             <h1 class="categories-tittle">Kategori Hewan</h1>
             <div class="container categories-grid">
@@ -72,11 +82,10 @@
                     <div class="category-name">Kura kura</div>
                 </div>
             </div>
-    </section>
-
+        </section>
         <button class="btn-primary-top">Lihat semua</button>
-
-        <section class="adoption-section">
+        
+        <section id="adoption-section" class="adoption-section">
             <h1 class="section-title">Hewan Adopsi</h1>
             <div class="animal-grid">
                 <div class="animal-card">
@@ -188,12 +197,12 @@
                 </div>
             </div>
         </section>
-
         <button class="btn-primary-bottom">Lihat semua</button>
     </div>
+    <!-- End Kategori Hewan dan Hewan Adopsi -->
     
+    <!-- Cara Merawat Hewan Kesayangan -->
     <div class="container">
-
         <section class="care-guide-section">
             <div class="care-guide-content">
                 <h2 class="care-guide-title">Cara Merawat Hewan Kesayanganmu</h2>
@@ -216,7 +225,9 @@
                 </div>
             </div>
         </section>
+        <!-- End Care Guide Section -->
 
+        <!-- Dokter Hewan Terbaik -->
         <section class="doctors-section">
             <h2 class="section-title-dark">Pelayanan Terbaik Dimulai dari Dokter Terbaik</h2>
             <div class="doctor-grid">
@@ -293,7 +304,92 @@
                 </div>
             </div>
         </section>
-    </div>
+        <!-- End Dokter Hewan Terbaik -->
+        
+        <!-- about section -->
+        <section class="about-section" id="about-section">
+            <div class="about-content">
+                <h2 class="section-title-dark">Tentang Kami</h2>
+                <div class="about-content-wrapper">
+                    <div class="about-image">
+                        <img src="../image/furryidlogo.png" alt="Tim Furry.id sedang merawat beberapa hewan peliharaan">
+                    </div>
+                    <div class="about-text">
+                        <h3>Menghubungkan Hati, Menemukan Rumah Penuh Cinta</h3>
+                        <p><strong>Furry.id</strong> lahir dari kecintaan dan kepedulian mendalam terhadap kesejahteraan hewan. Kami percaya bahwa setiap hewan, terlepas dari ras atau usianya, berhak mendapatkan kesempatan untuk hidup di rumah yang aman dan penuh kasih sayang.</p>
+                        <p>Platform ini akan menjadi jembatan terpercaya yang menghubungkan hewan-hewan terlantar dari shelter dan penyelamat individu dengan para calon pengadopsi yang berhati mulia di seluruh Indonesia. Kami menyediakan platform yang tidak hanya mudah digunakan, tetapi juga aman dan edukatif untuk memastikan proses adopsi berjalan lancar dan bertanggung jawab.</p>
+                        <!-- <a href="#" class="btn-detail">Pelajari Lebih Lanjut</a> -->
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="about-section">
+            <div class="about-container">
+                <h1 class="page-title"></h1>
+                <div class="about-card">
+                    <div class="card-column-left">
+                        <h2>Siapa Kami?</h2>
+                        <p><strong>FURRY.ID</strong> adalah platform adopsi hewan berbasis website terpercaya yang hadir untuk menghubungkan hewan terlantar dengan keluarga baru penuh cinta. Kami percaya bahwa setiap makhluk hidup berhak mendapatkan kasih sayang dan rumah yang aman.</p>
+                        <div class="mission">
+                            <h3>Misi Kami :</h3>
+                            <p>Kami berkomitmen untuk mempermudah proses adopsi hewan, mengedukasi masyarakat tentang pentingnya adopsi, dan mendorong gaya hidup peduli hewan.</p>
+                            <p class="quote"><em>"Adopsi bukan hanya menyelamatkan nyawa, tapi juga membuka lembaran baru penuh cinta."</em></p>
+                        </div>
+                    </div>
+                    <div class="card-column-right">
+                        <h2>Apa yang Kami Lakukan?</h2>
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i> Menyediakan platform untuk mencari dan mengadopsi hewan secara aman</li>
+                            <li><i class="fas fa-check-circle"></i> Menyaring profil pengadopsi dan pemilik dengan cermat</li>
+                            <li><i class="fas fa-check-circle"></i> Menyediakan edukasi seputar perawatan dan kesehatan hewan</li>
+                            <li><i class="fas fa-check-circle"></i> Menjadi jembatan antara komunitas penyayang hewan, shelter, dan individu</li>
+                        </ul>
+                        <div class="logo-watermark">
+                            <!-- <img src="../image/Frame 44.png" alt="Logo FURRY.ID"> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End about section -->
+
+        <!-- FAQ Section (statik, tanpa JavaScript) -->
+        <section class="faq-section" id="faq-section">
+            <h2 class="faq-title">FAQ (Pertanyaan yang sering diajukan)</h2>
+            <div class="container">
+                <div class="faq-card">
+
+                    <div class="faq-row">
+                        <div class="faq-q">Q: Apa itu Furry.id?</div>
+                        <div class="faq-a">A: Furry.id adalah platform adopsi hewan berbulu (furry) yang menghubungkan calon adopter dengan pemilik/pengurus hewan.</div>
+                    </div>
+
+                    <div class="faq-row">
+                        <div class="faq-q">Q: Apa saja hewan yang tersedia di Furry.id?</div>
+                        <div class="faq-a">A: Kucing, anjing, kelinci, rubah, marmut, dan hamster.</div>
+                    </div>
+
+                    <div class="faq-row">
+                        <div class="faq-q">Q: Apakah semua hewan di sini gratis?</div>
+                        <div class="faq-a">A: Tidak semua. Beberapa hewan bisa diadopsi gratis, lainnya mungkin ada biaya donasi. Semua informasi akan ditampilkan di detail hewan.</div>
+                    </div>
+
+                    <div class="faq-row">
+                        <div class="faq-q">Q: Bagaimana cara mengadopsi hewan di Furry.id?</div>
+                        <div class="faq-a">A: Buat akun, pilih hewan yang diinginkan, isi formulir adopsi, lalu tunggu konfirmasi dari pemilik/pengurus.</div>
+                    </div>
+
+                    <div class="faq-row">
+                        <div class="faq-q">Q: Apakah Furry.id menyediakan konsultasi?</div>
+                        <div class="faq-a">A: Ya, kamu bisa menggunakan fitur AI kami atau menghubungi dokter/perawat hewan yang bekerja sama dengan Furry.id.</div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- End FAQ Section -->
+
+        
     <!-- Tutup .container sebelum footer -->
     <footer class="main-footer">
         <div class="footer-content">
@@ -305,11 +401,11 @@
             <div class="footer-column footer-navigasi">
                 <h4>Navigasi</h4>
                 <ul>
-                    <li><a href="#">Beranda</a></li>
-                    <li><a href="#">Tentang Kami</a></li>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#about-section">Tentang Kami</a></li>
                     <li><a href="#">Cari Hewan</a></li>
                     <li><a href="#">Posting Hewan</a></li>
-                    <li><a href="#">Adopsi Hewan</a></li>
+                    <li><a href="#adoption-section">Adopsi Hewan</a></li>
                 </ul>
             </div>
 

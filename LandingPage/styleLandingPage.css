@@ -15,11 +15,15 @@ html, body {
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
-    background-color: #f8f8f8; /* Warna latar belakang umum halaman */
-    color: #333;
+    /* background: linear-gradient(40deg, #d6ad7f, #bb754caf, #26546b); */
+    background-color: #f2f2f2; Fallback untuk browser lama
+    background-attachment: fixed; /* Membuat gradient tetap saat di-scroll */
+    /* background-color: #fc8383; Warna latar belakang umum halaman */
+    color: #ffffff;
     line-height: 1.6;
     overflow-x: hidden; 
 }
+
 
 .container {
     max-width: 1200px;
@@ -28,9 +32,9 @@ body {
     box-sizing: border-box;
     width: 100%;
     /* Hapus background-color dan box-shadow jika menyebabkan overflow */
-    background-color: var(--white);
+    background-color: #fff;
     border-radius: 10px;
-    box-shadow: 0 4px 15px var(--shadow-color);
+    box-shadow: 0 4px 15px #000000;
     position: relative;
 }
 
@@ -89,6 +93,7 @@ h1, h2, h3 {
     top: 0;
     z-index: 1000;
 }
+
 
 .header-content {
     display: flex;
@@ -249,20 +254,22 @@ h1, h2, h3 {
     width: 100%;
     height: 150px; /* Tinggi gelombang */
     overflow: hidden;
-    z-index: 3; /* Pastikan gelombang di atas hero content */
+    z-index: 1; /* Pastikan gelombang di atas hero content */
+    /* background: linear-gradient(125deg, #D86352, #FBAE54, #78AEAD) */
 }
 
 .wave-shape svg {
     width: 100%;
     height: 100%;
     display: block;
+    /* background: linear-gradient(110deg, #FBAE54, #294C63); */
 }
 
 /* --- Pet Categories Section --- */
 .pet-categories-section {
     background-size: cover;
     border-radius: 10px;
-    padding: 20px 20px;
+    padding: 60px 20px 20px 20px; /* Tambah padding atas agar judul tidak terlalu mepet */
     text-align: center;
     margin-bottom: 40px;
     color: var(--dark-text-blue);
@@ -272,11 +279,12 @@ h1, h2, h3 {
 }
 .categories-tittle{
     font-size: 2.5rem;
-    color: var(--dark-text-blue);
+    color: #142e49; /* Ubah warna teks menjadi putih */
     margin-bottom: 40px;
     font-weight: 700;
     letter-spacing: 1px;
-    text-align: center; /* Pusatkan judul */
+    text-align: center;
+    /* text-shadow: 2px 2px 4px rgba(0,0,0,0.3); Tambah bayangan agar lebih terbaca */
 }
 
 .categories-grid {
@@ -494,13 +502,12 @@ h1, h2, h3 {
 
 .section-title {
     font-size: 2.5rem;
-    color: var(--white);
+    color:#142e49;
     margin-bottom: 40px;
     font-weight: 700;
     letter-spacing: 1px;
     display: inline-block; /* To make background work */
     padding: 5px 15px;
-    background-color: var(--primary-blue); /* To cover the dashed border */
     position: relative; /* To bring it above dashed border */
     z-index: 1; /* Ensure title is above dashed border */
 }
@@ -635,7 +642,7 @@ h1, h2, h3 {
 }
 
 /* --- NEW: Cara Merawat Hewan Kesayanganmu Section --- */
-    .care-guide-section {
+.care-guide-section {
         background: url('https://via.placeholder.com/1200x400/87CEEB/FFFFFF?text=Pet+Care+Background') no-repeat center center/cover; /* Placeholder image */
         background-size: cover;
         border-radius: 10px;
@@ -656,7 +663,7 @@ h1, h2, h3 {
 
 .care-guide-title {
     font-size: 2.5rem;
-    color: var(--dark-text-blue);
+    color: #142e49;
     margin-bottom: 40px;
     font-weight: 700;
     letter-spacing: 1px;
@@ -673,7 +680,7 @@ h1, h2, h3 {
 }
 
 .care-item {
-    background-color: #fff;
+    background-color: #142e49;
     padding: 25px;
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
@@ -697,7 +704,7 @@ h1, h2, h3 {
     object-fit: contain;
     display: block;
     border-radius: 10px 10px 0 0;
-    background: #cbbcbc;
+    background: #ffffff;
     box-sizing: border-box;
     border: none;
     margin: 0;
@@ -713,7 +720,7 @@ h1, h2, h3 {
 
 .care-item p {
     font-size: 0.9rem;
-    color: #555;
+    color: #fff;
 }
 
 /* --- NEW: Pelayanan Terbaik Dimulai dari Dokter Terbaik Section --- */
@@ -727,7 +734,7 @@ h1, h2, h3 {
 
 .section-title-dark { /* For dark text on light background */
     font-size: 2.5rem;
-    color: var(--dark-text-blue);
+    color: #142e49 !important; /* Ubah warna teks menjadi putih */
     margin-bottom: 40px;
     font-weight: 700;
     letter-spacing: 1px;
@@ -916,9 +923,107 @@ h1, h2, h3 {
     background-color: #2b6cb0;
 }
 
+/* Ganti class .section-tittle ke .section-title-dark di HTML untuk konsistensi */
+.about-section{
+    /* background-color: #ffffff; Warna latar belakang yang lebih terang */
+    padding: 40px 20px;
+    border-radius: 10px;
+    margin-bottom: 40px;
+}
+.section-title-dark {
+    color: #ffffff; /* Pastikan warna judul sesuai */
+    text-align: center;
+}
+
+.about-content-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    text-align: left;
+    margin-top: 40px;
+}
+
+.about-image {
+    flex: 1;
+    min-width: 300px;
+}
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
+    background-color: #142e49;
+    padding: 30px;
+}
+
+.about-text {
+    flex: 1.5; /* Memberi lebih banyak ruang untuk teks */
+    text-align: justify;
+    background-color: #142e49;
+    border-radius: 10px;
+    padding: 47px 20px;
+    object-fit: cover;
+}
+
+.about-text h3 {
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: #ffffff; /* Warna biru tua dari header */
+    margin-bottom: 15px;
+    margin-top: 20px;
+}
+
+.about-text p {
+    font-size: 0.9rem;
+    color: #ffffff;
+    /* color: #142e49; */
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.about-text .btn-detail {
+    margin-top: 15px;
+    display: inline-block;
+    background-color: #d86352; /* Menggunakan warna oranye dari tombol "Cari" */
+    color: #fff;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.about-text .btn-detail:hover {
+    background-color: #c04a39; /* Warna lebih gelap saat hover */
+}
+
+
+/* --- Responsive untuk About Section --- */
+@media (max-width: 768px) {
+    .about-content-wrapper {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+    .about-text {
+        order: 1; /* Teks tampil lebih dulu di mobile */
+    }
+    .about-image {
+        order: 2; /* Gambar tampil setelah teks */
+        max-width: 80%;
+    }
+    .about-text h3 {
+        font-size: 1.6rem;
+    }
+}
+
 /* --- NEW: Footer Styles --- */
 .main-footer {
     background-color: #142e49;
+    /* background: linear-gradient(40deg, #dd9c52, #403050af, #26546b); */
+     /* Latar belakang 'glass' untuk menjaga keterbacaan */
+    /* background-color: rgba(255, 255, 255, 0.9);  */
+    backdrop-filter: blur(5px);
+    /* box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1); */
     padding: 40px 0 0 0;
     margin-top: 50px;
     width: 100vw;
@@ -1033,8 +1138,8 @@ h1, h2, h3 {
     font-size: 0.95em;
     color: #b0b8c1;
     letter-spacing: 0.5px;
-    margin-top: 2rem;
-    padding-top: 1rem;
+    margin-top: 1rem;
+    padding:5px 0;
     border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
 
@@ -1103,4 +1208,252 @@ h1, h2, h3 {
     .footer-bottom {
         font-size: 0.8em;
     }
+}
+/* --- 3. About Page Styles --- */
+.about-section {
+    padding: 0px 0;
+}
+
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.page-title {
+    font-size: 2.5rem;
+    color: #142e49;
+    font-weight: 700;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+/* .page-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: #3498db;
+    margin: 10px auto 0;
+} */
+
+.about-card {
+    background-color: #142e49;
+    padding: 50px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    position: relative;
+    overflow: hidden;
+}
+
+.card-column-left, .card-column-right {
+    text-align: left;
+    position: relative;
+    z-index: 2;
+}
+
+.about-card h2, .mission h3 {
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.about-card p {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.mission {
+    margin-top: 30px;
+}
+
+.quote {
+    font-style: italic;
+    color: #777;
+    border-left: 3px solid #3498db;
+    padding-left: 15px;
+}
+
+.card-column-right ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.card-column-right ul li {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+    font-size: 1.05rem;
+    color: #ffffff;
+    line-height: 1.5;
+}
+
+.card-column-right ul li i {
+    color: #2ecc71;
+    font-size: 1.2rem;
+}
+
+.logo-watermark {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.logo-watermark img {
+    height: 350px;
+    opacity: 0.08;
+}
+
+/* FAQ Section Design */
+.faq-section {
+    background-size: cover;
+    /* background-color: #142e49; */
+    border-radius: 10px;
+    padding: 20px 0; /* sama seperti section lain */
+    margin-bottom: 40px;
+}
+
+.faq-card {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    background-color: #ffffff; /* Warna latar belakang yang lebih gelap */
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    position: relative; /* Untuk wave di bawah */
+
+}
+
+/* Title style consistent with other section titles */
+.faq-title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #142e49;
+    margin-bottom: 40px;
+    letter-spacing: 1px;
+}
+
+/* grid for FAQ items: two columns on desktop, one on mobile */
+.faq-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    align-items: start;
+}
+
+/* each details acts like a dark card */
+.faq-list details {
+    background: #22304a;
+    border-radius: 10px;
+    padding: 24px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    border: none;
+    overflow: hidden;
+    transition: transform 0.18s, box-shadow 0.18s;
+}
+
+.faq-list details:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.13);
+}
+
+.faq-list summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    font-weight: 700;
+    color: #fff;
+    padding: 0;
+    outline: none;
+    font-size: 1.1rem;
+}
+
+.faq-list summary::after {
+    content: '+';
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    border-radius: 8px;
+    background: rgba(255,255,255,0.06);
+    color: #fff;
+    font-weight: 700;
+    transition: background 0.18s, color 0.18s;
+}
+
+.faq-list details[open] summary::after {
+    content: "−";
+    background: #d86352;
+    color: #fff;
+}
+
+.faq-list .faq-answer {
+    padding-top: 16px;
+    color: #e6eef4;
+    line-height: 1.7;
+    font-size: 1rem;
+}
+
+/* fallback static rows (kept for compatibility) */
+.faq-row {
+    display: flex;
+    gap: 18px;
+    align-items: flex-start;
+    border-top: 1px solid rgba(155, 155, 155, 0.5);
+    padding: 8px 8px;
+    /* background: #22304a; */
+    /* border-radius: 10px; */
+    margin-bottom: 18px;
+}
+
+.faq-row:first-of-type { border-top: none; }
+
+.faq-q {
+    flex: 1px;
+    font-weight: 700;
+    color: #333;
+}
+
+.faq-a {
+    flex: 1;
+    color: #333;
+    line-height: 1.7;
+}
+
+/* Responsive: stack columns on small screens and enlarge hit targets */
+@media (max-width: 880px) {
+	.faq-list {
+		grid-template-columns: 1fr;
+	}
+	.faq-list details {
+		padding: 16px;
+	}
+	.faq-list summary::after {
+		width: 40px;
+		height: 40px;
+		line-height: 40px;
+	}
+}
+
+/* Responsive */
+@media (max-width: 800px) {
+    .faq-card { padding: 18px; }
+    .faq-list summary { font-size: 0.98rem; }
+    .faq-row { flex-direction: column; gap: 8px; }
+    .faq-q { flex: none; }
 }
