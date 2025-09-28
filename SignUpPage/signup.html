@@ -32,17 +32,21 @@
     
     <div class="form-container">
         <div class="glass-form">
-            <h2 class="form-title">Daftar Akun Baru</h2>
-            <p class="form-subtitle">Buat akun untuk memulai</p>
+            <h2 class="form-title">Bergabunglah bersama Furry.id</h2>
+            <p class="form-subtitle">Buat akun Anda untuk memulai perjalanan adopsi hewan peliharaan Anda!</p>
             <form action="#" method="POST" class="signup-form">
                 <div class="input-group">
                     <label for="name">Nama Lengkap</label>
                     <input type="text" id="name" name="name" placeholder="Masukkan nama Anda" required>
                 </div>
                 <div class="input-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" placeholder="Masukkan email Anda" required>
+                    <label for="identifier">No. Telp atau Alamat E-mail</label>
+                    <input type="textr" id="identifier" name="identifier" placeholder="Masukkan No. Telp atau Alamat E-mail Anda" required>
                 </div>
+                <!-- <div class="input-group">
+                    <label for="notelp">No.Telp</label>
+                    <input type="text" id="notelp" name="notelp" placeholder="Masukkan No. Telepon Anda" required>
+                </div> -->
                 <div class="input-group">
                     <label for="password">Kata Sandi</label>
                     <input type="password" id="password" name="password" placeholder="Buat kata sandi" required>
@@ -55,10 +59,10 @@
                     <input type="checkbox" id="terms" name="terms" required>
                     <label for="terms">Saya setuju dengan <a href="#">Syarat & Ketentuan</a> dan <a href="#">Kebijakan Privasi</a></label>
                 </div>
-                <button type="submit" class="submit-btn">Daftar</button>
+                <button type="submit" class="submit-btn">Signt Up</button>
             </form>
             <div class="divider">
-                <span>Atau daftar dengan</span>
+                <span>Atau Sign Up dengan</span>
             </div>
             <div class="social-login">
                 <button class="social-btn google"><i class="fab fa-google"></i> Google</button>
@@ -69,58 +73,48 @@
             </p>
         </div>
     </div>
-    
-    <footer id="footer-contact" class="main-footer">
-        <div class="container footer-content">
-            <div class="footer-column footer-brand">
-                <div class="footer-logo">
-                    <img src="../image/Furry.id Logo Horizontal Berwarna.png" alt="Furry.id Logo">
-                </div>
-                <p>Platform adopsi hewan terpercaya yang menghubungkan sahabat berbulu dengan rumah baru penuh cinta. Mari bersama menciptakan dunia yang lebih baik untuk hewan.</p>
-            </div>
-            <div class="footer-column">
-                <h4>Menu</h4>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#adopsi">Hewan Adopsi</a></li>
-                    <li><a href="#about">Tentang Kami</a></li>
-                    <li><a href="#footer-contact">Kontak</a></li>
-                </ul>
-            </div>
-            <div class="footer-column">
-                <h4>Informasi</h4>
-                <ul>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Pusat Bantuan</a></li>
-                    <li><a href="#">Kebijakan Privasi</a></li>
-                    <li><a href="#">Syarat & Ketentuan</a></li>
-                </ul>
-            </div>
-            <div class="footer-column footer-contact-social">
-                <div class="footer-social-media">
-                    <h4>Media Sosial</h4>
-                    <div class="social-icons">
-                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-                        <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
-                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                    </div>
-                </div>
-                <div class="footer-contact">
-                    <h4>Kontak</h4>
-                    <ul>
-                        <li><i class="fa-regular fa-envelope"></i> furry@email.com</li>
-                        <li><i class="fas fa-phone-alt"></i> 0812-3456-7890</li>
-                        <li><i class="fas fa-map-marker-alt"></i> Semarang, Jawa Tengah</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy;2025 Furry.id | All Rights Reserved</p>
-        </div>
-    </footer>
+    <div class="footer-bottom">
+        <p>&copy;2025 Furry.id | All Rights Reserved</p>
+    </div>
+<script>
+    // Example of simple form validation
+    document.querySelector('.signup-form').addEventListener('submit', function(event) {
+        var password = document.getElementById('password').value;
+        var confirmPassword = document.getElementById('confirm-password').value;
+        if (password !== confirmPassword) {
+            alert('Kata sandi dan konfirmasi kata sandi tidak sesuai.');
+            event.preventDefault();
+        }
+    });
+    // Toggle password visibility
+    var passwordField = document.getElementById('password');
+    var togglePassword = document.getElementById('toggle-password');
+    togglePassword.addEventListener('click', function() {
+        if (passwordField.type === 'password') {
+            passwordField.type = 'text';
+            togglePassword.classList.remove('fa-eye');
+            togglePassword.classList.add('fa-eye-slash');
+        } else {
+            passwordField.type = 'password';
+            togglePassword.classList.remove('fa-eye-slash');
+            togglePassword.classList.add('fa-eye');
+        }
+    });
 
+    // Toggle confirm password visibility
+    var confirmPasswordField = document.getElementById('confirm-password');
+    var toggleConfirmPassword = document.getElementById('toggle-confirm-password');
+    toggleConfirmPassword.addEventListener('click', function() {
+        if (confirmPasswordField.type === 'password') {
+            confirmPasswordField.type = 'text';
+            toggleConfirmPassword.classList.remove('fa-eye');
+            toggleConfirmPassword.classList.add('fa-eye-slash');
+        } else {
+            confirmPasswordField.type = 'password';
+            toggleConfirmPassword.classList.remove('fa-eye-slash');
+            toggleConfirmPassword.classList.add('fa-eye');
+        }
+    });
+</script>
 </body>
 </html>
