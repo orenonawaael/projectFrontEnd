@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buat Janji Temu - Furry.id</title>
+    <link rel="stylesheet" href="styleLandingPage.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+    <style>
+        .appointment-container {
+            max-width: 700px;
+            margin: 40px auto;
+            padding: 35px;
+            background: #ffffff;
+            border-radius: 20px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+        }
+        .appointment-container h2 {
+            text-align: center;
+            margin: 0 0 10px 0;
+            color: #142e49;
+            font-size: 2rem;
+            font-weight: 800;
+        }
+        .appointment-container .subtitle {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #6c757d;
+            font-size: 1rem;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #142e49;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #cfd8e3;
+            border-radius: 10px;
+            font-size: 1rem;
+            font-family: 'Poppins', sans-serif;
+            color: #333;
+            transition: border-color 0.3s;
+        }
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #3498db;
+        }
+        textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+        .btn-submit {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 999px;
+            background: linear-gradient(135deg, #ff6b6b, #ee5a52);
+            color: #fff;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: transform 0.2s;
+            box-shadow: 0 8px 25px rgba(255,107,107,0.3);
+        }
+        .btn-submit:hover {
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <div class="container header-content">
+            <div class="logo">
+                <img src="../image/Furry.id Logo Horizontal Berwarna.png" alt="Furry.id Logo">
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="landingpage.html#home">Home</a></li>
+                    <li><a href="landingpage.html#adopsi">Hewan Adopsi</a></li>
+                    <li><a href="landingpage.html#about">Tentang Kami</a></li>
+                    <li><a href="landingpage.html#footer-contact">Kontak</a></li>
+                </ul>
+            </nav>
+            <div class="auth-buttons">
+                <a href="../SignUpPage/signup.html" class="btn btn-primary-outline">Sign Up</a>
+                <a href="../SignInPage/signin.html" class="btn btn-primary-filled">Sign In</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="appointment-container">
+        <h2>Buat Janji Temu</h2>
+        <p class="subtitle">Anda akan membuat janji temu dengan <strong>drh. Angela M. Wijisenti</strong>.</p>
+
+        <form action="#" method="POST">
+            <div class="form-group">
+                <label for="owner_name">Nama Pemilik</label>
+                <input type="text" id="owner_name" name="owner_name" placeholder="Masukkan nama lengkap Anda" required>
+            </div>
+            <div class="form-group">
+                <label for="owner_phone">Nomor Telepon</label>
+                <input type="tel" id="owner_phone" name="owner_phone" placeholder="Contoh: 081234567890" required>
+            </div>
+
+            <div class="form-group">
+                <label for="pet_name">Nama Hewan Peliharaan</label>
+                <input type="text" id="pet_name" name="pet_name" placeholder="Masukkan nama hewan Anda" required>
+            </div>
+             <div class="form-group">
+                <label for="pet_type">Jenis Hewan</label>
+                <select id="pet_type" name="pet_type" required>
+                    <option value="">-- Pilih Jenis Hewan --</option>
+                    <option value="kucing">Kucing</option>
+                    <option value="anjing">Anjing</option>
+                    <option value="kelinci">Kelinci</option>
+                    <option value="lainnya">Lainnya</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="appointment_date">Tanggal Pilihan</label>
+                <input type="date" id="appointment_date" name="appointment_date" required>
+            </div>
+            <div class="form-group">
+                <label for="visit_reason">Alasan Kunjungan</label>
+                <textarea id="visit_reason" name="visit_reason" placeholder="Contoh: Pemeriksaan rutin, vaksinasi, atau jelaskan keluhan hewan Anda" required></textarea>
+            </div>
+
+            <button type="submit" class="btn-submit">Kirim Permintaan Janji Temu</button>
+        </form>
+    </div>
+
+    <footer id="main-footer" class="main-footer">
+        <div class="footer-content">
+            <div class="footer-column footer-brand">
+                <img src="../image/Frame 44.png" alt="FURRY.ID Logo" class="footer-logo">
+                <p>Platform adopsi hewan terpercaya yang menghubungkan sahabat berbulu dengan rumah baru penuh cinta</p>
+            </div>
+            <div class="footer-column footer-navigasi">
+                <h4>Navigasi</h4>
+                <ul>
+                    <li><a href="landingpage.html#home">Home</a></li>
+                    <li><a href="landingpage.html#about">Tentang Kami</a></li>
+                    <li><a href="landingpage.html#home">Cari Hewan</a></li>
+                    <li><a href="#">Posting Hewan</a></li>
+                    <li><a href="landingpage.html#adopsi">Adopsi Hewan</a></li>
+                </ul>
+            </div>
+            <div class="footer-column footer-bantuan">
+                <h4>Bantuan & Dukungan</h4>
+                <ul>
+                    <li><a href="landingpage.html#faq-section">FAQ</a></li>
+                    <li><a href="landingpage.html#panduan-adopsi">Panduan Adopsi</a></li>
+                    <li><a href="landingpage.html#kebijakan-privasi">Kebijakan Privasi</a></li>
+                    <li><a href="landingpage.html#syarat-ketentuan">Syarat & Ketentuan</a></li>
+                </ul>
+            </div>
+            <div class="footer-column footer-contact-social">
+                <div class="footer-social-media">
+                    <h4>Media Sosial</h4>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div id="footer-contact" class="footer-contact">
+                    <h4>Kontak</h4>
+                    <ul>
+                        <li><i class="fa-regular fa-envelope "></i> furry@email.com</li>
+                        <li><i class="fas fa-phone-alt"></i> 0812-3456-7890</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Semarang, Jawa Tengah</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy;2025 Furry.id | All Rights Reserved</p>
+        </div>
+    </footer>
+</body>
+</html>
