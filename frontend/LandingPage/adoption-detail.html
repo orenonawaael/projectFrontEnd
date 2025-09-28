@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Adopsi - Furry.id</title>
+    <link rel="stylesheet" href="styleLandingPage.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+    <style>
+        .detail-container { max-width: 1100px; margin: 30px auto; padding: 0 20px;  }
+        .detail-card { background: #ffffff; border-radius: 20px; box-shadow: 0 15px 40px rgba(0,0,0,0.08); overflow: hidden; }
+        .detail-hero { display: grid; grid-template-columns: 1.1fr 1fr; gap: 0; }
+        .detail-hero img { width: 100%; height: 100%; object-fit: cover; display: block; }
+        .detail-info { padding: 28px; }
+        .detail-title { margin: 0 0 6px 0; color: #142e49; font-size: 2rem; font-weight: 800; }
+        .detail-sub { margin: 0 0 18px 0; color: #6c757d; font-size: 0.98rem; }
+        .badges { display: flex; flex-wrap: wrap; gap: 10px; margin: 14px 0 18px 0; }
+        .badge { background: linear-gradient(135deg,#cfeaff,#3e4e69); color:#fff; padding:8px 14px; border-radius: 999px; font-size: 0.9rem; font-weight: 600; }
+        .section-block { margin-top: 14px; }
+        .section-block h4 { margin: 0 0 8px 0; color:#142e49; font-size:1.05rem; }
+        .section-block p, .section-block ul { margin: 0; color:#6c757d; line-height: 1.7; font-size: 0.98rem; }
+        .section-block ul { padding-left: 18px; }
+        .cta-row { margin-top: 22px; display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+        .btn-primary { background: linear-gradient(135deg, #ff6b6b, #ee5a52); color:#fff; border:none; border-radius: 999px; padding: 12px 22px; font-weight:700; cursor:pointer; text-decoration:none; box-shadow:0 8px 25px rgba(255,107,107,0.3); }
+        .btn-outline { background: #ff6b6b; color:#ffffff; border:1px solid #cfd8e3; border-radius: 999px; padding: 12px 18px; font-weight:600; text-decoration:none;}
+        .meta { display:flex; gap:16px; color:#6c757d; font-size:0.95rem; }
+        .meta i { margin-right: 6px; color:#3498db; }
+        @media (max-width: 900px){ .detail-hero { grid-template-columns: 1fr; } .detail-hero img{ height: 280px; } }
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <div class="container header-content">
+            <div class="logo">
+                <img src="../image/Furry.id Logo Horizontal Berwarna.png" alt="Furry.id Logo">
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="landingpage.html#home">Home</a></li>
+                    <li><a href="landingpage.html#adopsi">Hewan Adopsi</a></li>
+                    <li><a href="landingpage.html#about">Tentang Kami</a></li>
+                    <li><a href="landingpage.html#footer-contact">Kontak</a></li>
+                </ul>
+            </nav>
+            <div class="auth-buttons">
+                <a href="../SignUpPage/signup.html" class="btn btn-primary-outline">Sign Up</a>
+                <a href="../SignInPage/signin.html" class="btn btn-primary-filled">Sign In</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="detail-container">
+        <a href="adoption.html" class="btn-outline" id="btn-outline-kembali"> Kembali ke daftar</a>
+        <div class="detail-card" style="margin-top:30px;">
+            <div class="detail-hero">
+                <img src="../image/persia.png" alt="Foto hewan">
+                <div class="detail-info">
+                    <h1 class="detail-title">Persia</h1>
+                    <p class="detail-sub">Berbulu panjang, jinak, dan cocok di dalam rumah.</p>
+                    <div class="badges">
+                        <span class="badge"><i class="fa-solid fa-venus-mars"></i> Betina</span>
+                        <span class="badge"><i class="fa-solid fa-cake-candles"></i> 2 tahun</span>
+                        <span class="badge"><i class="fa-solid fa-syringe"></i> Vaksin lengkap</span>
+                        <span class="badge"><i class="fa-solid fa-house"></i> Indoor</span>
+                    </div>
+                    <div class="meta">
+                        <span><i class="fa-solid fa-location-dot"></i> Semarang</span>
+                        <span><i class="fa-solid fa-paw"></i> Kucing</span>
+                    </div>
+
+                    <div class="section-block">
+                        <h4>Tentang Hewan</h4>
+                        <p>Kucing Persia yang tenang dan penyayang. Sudah terbiasa dengan lingkungan rumah dan litter trained. Cocok untuk keluarga yang mencari teman manja dan lembut.</p>
+                    </div>
+
+                    <div class="section-block">
+                        <h4>Kesehatan</h4>
+                        <ul>
+                            <li>Vaksin dasar lengkap</li>
+                            <li>Sudah steril</li>
+                            <li>Catatan medis tersedia</li>
+                        </ul>
+                    </div>
+
+                    <div class="cta-row">
+                        <a class="btn-primary" href="adoption-apply.html">Ajukan Adopsi</a>
+                        <a class="btn-outline" href="#">Hubungi Pemilik</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-block" style="margin-top:22px;">
+            <h4>Persyaratan Adopsi</h4>
+            <p>Pengadopsi bersedia melakukan perkenalan di rumah, menandatangani perjanjian adopsi, dan memastikan perawatan rutin (makanan, grooming, dan kontrol kesehatan).</p>
+        </div>
+    </div>
+
+    <footer id="main-footer" class="main-footer">
+        <div class="footer-content">
+            <div class="footer-column footer-brand">
+                <img src="../image/Frame 44.png" alt="FURRY.ID Logo" class="footer-logo">
+                <p>Platform adopsi hewan terpercaya yang menghubungkan sahabat berbulu dengan rumah baru penuh cinta</p>
+            </div>
+            <div class="footer-column footer-navigasi">
+                <h4>Navigasi</h4>
+                <ul>
+                    <li><a href="landingpage.html#home">Home</a></li>
+                    <li><a href="landingpage.html#about">Tentang Kami</a></li>
+                    <li><a href="landingpage.html#home">Cari Hewan</a></li>
+                    <li><a href="#">Posting Hewan</a></li>
+                    <li><a href="landingpage.html#adopsi">Adopsi Hewan</a></li>
+                </ul>
+            </div>
+            <div class="footer-column footer-bantuan">
+                <h4>Bantuan & Dukungan</h4>
+                <ul>
+                    <li><a href="landingpage.html#faq-section">FAQ</a></li>
+                    <li><a href="landingpage.html#panduan-adopsi">Panduan Adopsi</a></li>
+                    <li><a href="landingpage.html#kebijakan-privasi">Kebijakan Privasi</a></li>
+                    <li><a href="landingpage.html#syarat-ketentuan">Syarat & Ketentuan</a></li>
+                </ul>
+            </div>
+            <div class="footer-column footer-contact-social">
+                <div class="footer-social-media">
+                    <h4>Media Sosial</h4>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div id="footer-contact" class="footer-contact">
+                    <h4>Kontak</h4>
+                    <ul>
+                        <li><i class="fa-regular fa-envelope "></i> furry@email.com</li>
+                        <li><i class="fas fa-phone-alt"></i> 0812-3456-7890</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Semarang, Jawa Tengah</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy;2025 Furry.id | All Rights Reserved</p>
+        </div>
+    </footer>
+</body>
+</html>
+
+

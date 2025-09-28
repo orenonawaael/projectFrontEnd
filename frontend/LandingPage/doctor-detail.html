@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Dokter - Furry.id</title>
+    <link rel="stylesheet" href="styleLandingPage.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+    <style>
+        /* CSS yang Anda berikan akan bekerja sempurna di sini karena struktur HTML-nya sama */
+        .detail-container { max-width: 1100px; margin: 30px auto; padding: 0 20px;  }
+        .detail-card { background: #ffffff; border-radius: 20px; box-shadow: 0 15px 40px rgba(0,0,0,0.08); overflow: hidden; }
+        .detail-hero { display: grid; grid-template-columns: 1.1fr 1fr; gap: 0; }
+        .detail-hero img { width: 100%; height: 100%; object-fit: cover; display: block; }
+        .detail-info { padding: 28px; }
+        .detail-title { margin: 0 0 6px 0; color: #142e49; font-size: 2rem; font-weight: 800; }
+        .detail-sub { margin: 0 0 18px 0; color: #6c757d; font-size: 0.98rem; }
+        .badges { display: flex; flex-wrap: wrap; gap: 10px; margin: 14px 0 18px 0; }
+        .badge { background: linear-gradient(135deg,#cfeaff,#3e4e69); color:#fff; padding:8px 14px; border-radius: 999px; font-size: 0.9rem; font-weight: 600; }
+        .section-block { margin-top: 14px; }
+        .section-block h4 { margin: 0 0 8px 0; color:#142e49; font-size:1.05rem; }
+        .section-block p, .section-block ul { margin: 0; color:#6c757d; line-height: 1.7; font-size: 0.98rem; }
+        .section-block ul { padding-left: 18px; }
+        .cta-row { margin-top: 22px; display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+        .btn-primary { background: linear-gradient(135deg, #ff6b6b, #ee5a52); color:#fff; border:none; border-radius: 999px; padding: 12px 22px; font-weight:700; cursor:pointer; text-decoration:none; box-shadow:0 8px 25px rgba(255,107,107,0.3); }
+        .btn-outline { background: #ff6b6b; color:#ffffff; border:1px solid #cfd8e3; border-radius: 999px; padding: 12px 18px; font-weight:600; text-decoration:none;}
+        .meta { display:flex; gap:16px; color:#6c757d; font-size:0.95rem; }
+        .meta i { margin-right: 6px; color:#3498db; }
+        @media (max-width: 900px){ .detail-hero { grid-template-columns: 1fr; } .detail-hero img{ height: 280px; } }
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <div class="container header-content">
+            <div class="logo">
+                <img src="../image/Furry.id Logo Horizontal Berwarna.png" alt="Furry.id Logo">
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="landingpage.html#home">Home</a></li>
+                    <li><a href="landingpage.html#adopsi">Hewan Adopsi</a></li>
+                    <li><a href="landingpage.html#about">Tentang Kami</a></li>
+                    <li><a href="landingpage.html#footer-contact">Kontak</a></li>
+                </ul>
+            </nav>
+            <div class="auth-buttons">
+                <a href="../SignUpPage/signup.html" class="btn btn-primary-outline">Sign Up</a>
+                <a href="../SignInPage/signin.html" class="btn btn-primary-filled">Sign In</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="detail-container">
+        <a href="landingpage.html" class="btn-outline" id="btn-outline-kembali"> Kembali ke daftar dokter</a>
+        <div class="detail-card" style="margin-top:30px;">
+            <div class="detail-hero">
+                <img src="../image/drh. Angela M. Wijiseti.png" alt="Foto Dokter Hewan">
+                
+                <div class="detail-info">
+                    <h1 class="detail-title">drh. Angela M. Wijiseti</h1>
+                    <p class="detail-sub">Dokter Hewan Umum - Spesialis Hewan Kecil (Anjing & Kucing)</p>
+                    
+                    <div class="badges">
+                        <span class="badge"><i class="fa-solid fa-briefcase"></i> 10+ tahun pengalaman</span>
+                        <span class="badge"><i class="fa-solid fa-star"></i> 4.8/5.0 Rating</span>
+                        <span class="badge"><i class="fa-solid fa-award"></i> Terlisensi</span>
+                    </div>
+
+                    <div class="meta">
+                        <span><i class="fa-solid fa-location-dot"></i> Semarang</span>
+                        <span><i class="fa-solid fa-hospital"></i> Klinik Sehat Pet</span>
+                    </div>
+
+                    <div class="section-block">
+                        <h4>Profil Dokter</h4>
+                        <p>Dr. Amelia adalah seorang dokter hewan berdedikasi dengan pengalaman lebih dari 10 tahun dalam merawat hewan kecil. Beliau lulusan terbaik dan aktif mengikuti seminar untuk memperbarui ilmunya.</p>
+                    </div>
+
+                    <div class="section-block">
+                        <h4>Layanan & Spesialisasi</h4>
+                        <ul>
+                            <li>Vaksinasi & Pemeriksaan Rutin</li>
+                            <li>Konsultasi Gizi dan Perilaku</li>
+                            <li>Operasi Minor (Sterilisasi, dll.)</li>
+                            <li>Perawatan Gigi Hewan</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="cta-row">
+                        <a class="btn-primary" href="janjitemu.html">Buat Janji Temu</a>
+                        <a class="btn-outline" href="#">Chat Konsultasi</a>
+                    </div>
+                </div>
+                </div>
+        </div>
+
+        <div class="section-block" style="margin-top:22px; padding: 20px; background: #fff; border-radius: 20px; box-shadow: 0 15px 40px rgba(0,0,0,0.08);">
+            <h4>Jadwal Praktik</h4>
+            <ul>
+                <li><strong>Senin - Jumat:</strong> 09:00 - 17:00 WIB</li>
+                <li><strong>Sabtu:</strong> 10:00 - 14:00 WIB</li>
+                <li><strong>Minggu & Hari Libur:</strong> Tutup</li>
+            </ul>
+        </div>
+    </div>
+
+    <footer id="main-footer" class="main-footer">
+        <div class="footer-content">
+            <div class="footer-column footer-brand">
+                <img src="../image/Frame 44.png" alt="FURRY.ID Logo" class="footer-logo">
+                <p>Platform adopsi hewan terpercaya yang menghubungkan sahabat berbulu dengan rumah baru penuh cinta</p>
+            </div>
+            <div class="footer-column footer-navigasi">
+                <h4>Navigasi</h4>
+                <ul>
+                    <li><a href="landingpage.html#home">Home</a></li>
+                    <li><a href="landingpage.html#about">Tentang Kami</a></li>
+                    <li><a href="landingpage.html#home">Cari Hewan</a></li>
+                    <li><a href="#">Posting Hewan</a></li>
+                    <li><a href="landingpage.html#adopsi">Adopsi Hewan</a></li>
+                </ul>
+            </div>
+            <div class="footer-column footer-bantuan">
+                <h4>Bantuan & Dukungan</h4>
+                <ul>
+                    <li><a href="landingpage.html#faq-section">FAQ</a></li>
+                    <li><a href="landingpage.html#panduan-adopsi">Panduan Adopsi</a></li>
+                    <li><a href="landingpage.html#kebijakan-privasi">Kebijakan Privasi</a></li>
+                    <li><a href="landingpage.html#syarat-ketentuan">Syarat & Ketentuan</a></li>
+                </ul>
+            </div>
+            <div class="footer-column footer-contact-social">
+                <div class="footer-social-media">
+                    <h4>Media Sosial</h4>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div id="footer-contact" class="footer-contact">
+                    <h4>Kontak</h4>
+                    <ul>
+                        <li><i class="fa-regular fa-envelope "></i> furry@email.com</li>
+                        <li><i class="fas fa-phone-alt"></i> 0812-3456-7890</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Semarang, Jawa Tengah</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy;2025 Furry.id | All Rights Reserved</p>
+        </div>
+    </footer>
+</body>
+</html>
