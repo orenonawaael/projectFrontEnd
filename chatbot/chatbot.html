@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat dengan FurryBot - Furry.id</title>
+    
+    <link rel="stylesheet" href="../landingPage/styleLandingPage.css"> <link rel="stylesheet" href="chatbot.css"> <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+       <header class="main-header">
+        <div class="container header-content">
+            <div class="logo">
+                <img src="../image/Furry.id Logo Horizontal Berwarna.png" alt="Furry.id Logo">
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="../landingPage/landingpage.html#home">Home</a></li>
+                    <li><a href="../landingPage/landingpage.html#adopsi">Hewan Adopsi</a></li>
+                    <li><a href="../landingPage/landingpage.html#about">Tentang Kami</a></li>
+                    <li><a href="../landingPage/landingpage.html#footer-contact">Kontak</a></li>
+                </ul>
+            </nav>
+            <div class="auth-buttons">
+                <a href="../SignUpPage/signup.html" class="btn btn-primary-outline">Sign Up</a>
+                <a href="../SignInPage/signin.html" class="btn btn-primary-filled">Sign In</a>
+            </div>
+        </div>
+    </header>
+    <main class="chat-page-container">
+        <div class="chat-window-fullpage">
+            <div class="chatbot-header">
+                <div class="chatbot-avatar">
+                    <img src="../image/furryidlogo.png" alt="Avatar FurryBot">
+                </div>
+                <div class="chatbot-title">
+                    <h3>FurryBot</h3>
+                    <p>Online</p>
+                </div>
+            </div>
+            <div id="chatbot-body" class="chatbot-body">
+                <div class="chat-message bot-message">
+                    <p>Halo! 👋 Selamat datang di pusat bantuan Furry.id. Tanyakan apa saja seputar adopsi atau kesehatan hewan, dan saya akan coba membantu!</p>
+                </div>
+            </div>
+            <div class="chatbot-footer">
+                <input type="text" id="chatbot-input" placeholder="Ketik pesan Anda...">
+                <button id="chatbot-send-btn">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <footer id="main-footer" class="main-footer">
+        <div class="footer-content">
+            <div class="footer-column footer-brand">
+                <img src="../image/Frame 44.png" alt="FURRY.ID Logo" class="footer-logo"> <p>Platform adopsi hewan terpercaya yang menghubungkan sahabat berbulu dengan rumah baru penuh cinta</p>
+             </div>
+            <div class="footer-column footer-navigasi">
+                <h4>Navigasi</h4>
+                <ul>
+                    <li><a href="landingpage.html#home">Home</a></li>
+                    <li><a href="landingpage.html#about">Tentang Kami</a></li>
+                    <li><a href="#">Cari Hewan</a></li>
+                    <li><a href="#">Posting Hewan</a></li>
+                    <li><a href="landingpage.html#adopsi">Adopsi Hewan</a></li>
+                </ul>
+            </div>
+            <div class="footer-column footer-bantuan">
+                <h4>Bantuan & Dukungan</h4>
+                <ul>
+                    <li><a href="landingpage.html#faq-section">FAQ</a></li>
+                    <li><a href="landingpage.html#panduan-adopsi">Panduan Adopsi</a></li>
+                    <li><a href="landingpage.html#kebijakan-privasi">Kebijakan Privasi</a></li>
+                    <li><a href="landingpage.html#syarat-ketentuan">Syarat & Ketentuan</a></li>
+                </ul>
+            </div>
+            <div class="footer-column footer-contact-social">
+                <div class="footer-social-media">
+                    <h4>Media Sosial</h4>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div id="footer-contact" class="footer-contact">
+                    <h4>Kontak</h4>
+                    <ul>
+                        <li><i class="fa-regular fa-envelope "></i> furry@email.com</li>
+                        <li><i class="fas fa-phone-alt"></i> 0812-3456-7890</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Semarang, Jawa Tengah</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy;2025 Furry.id | All Rights Reserved</p>
+        </div>
+    </footer>
+    <script src="chatbot.js"></script>
+
+</body>
+</html>
