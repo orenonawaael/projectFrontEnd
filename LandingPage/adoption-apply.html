@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajukan Adopsi - Furry.id</title>
+    <link rel="stylesheet" href="styleLandingPage.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+    <style>
+        .apply-container { max-width: 1000px; margin: 30px auto; padding: 0 20px; }
+        .apply-header { margin-bottom: 16px; }
+        .apply-title { margin: 0; color:#142e49; font-size: 2rem; font-weight: 800; }
+        .apply-sub { margin: 6px 0 0 0; color:#6c757d; }
+        .apply-card { background:#ffffff; border-radius: 20px; box-shadow: 0 15px 40px rgba(0,0,0,0.08); padding: 22px; }
+        .form-grid { display:grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+        .form-row { display:flex; flex-direction:column; }
+        .form-row label { font-weight:600; color:#2c3e50; margin-bottom:6px; }
+        .form-row input, .form-row select, .form-row textarea { border:1px solid #e1e7ef; border-radius:12px; padding:12px 14px; font-family:inherit; font-size:0.98rem; outline:none; }
+        .form-row textarea { min-height:110px; resize:vertical; }
+        .full { grid-column: 1 / -1; }
+        .hint { font-size:0.85rem; color:#8a98a8; margin-top:6px; }
+        .agree { display:flex; align-items:center; gap:10px; margin-top:4px; color:#4b5563; }
+        .cta-bar { display:flex; gap:12px; flex-wrap:wrap; margin-top:16px; }
+        .btn-primary { background: linear-gradient(135deg, #ff6b6b, #ee5a52); color:#fff; border:none; border-radius: 999px; padding: 12px 22px; font-weight:700; cursor:pointer; text-decoration:none; box-shadow:0 8px 25px rgba(255,107,107,0.3); }
+        .btn-outline { background: linear-gradient(135deg, #ff6b6b, #ee5a52); color:#fff; border:none; border-radius: 999px; padding: 12px 22px; font-weight:700; cursor:pointer; text-decoration:none; box-shadow:0 8px 25px rgba(255,107,107,0.3); font-size:0.8rem; }
+        /* .btn-outline { background: transparent; color:#142e49; border:1px solid #cfd8e3; border-radius: 999px; padding: 12px 18px; font-weight:700; text-decoration:none; font-size:0.6rem; } */
+        @media (max-width: 900px){ .form-grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <div class="container header-content">
+            <div class="logo">
+                <img src="../image/Furry.id Logo Horizontal Berwarna.png" alt="Furry.id Logo">
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="landingpage.html#home">Home</a></li>
+                    <li><a href="landingpage.html#adopsi">Hewan Adopsi</a></li>
+                    <li><a href="landingpage.html#about">Tentang Kami</a></li>
+                    <li><a href="landingpage.html#footer-contact">Kontak</a></li>
+                </ul>
+            </nav>
+            <div class="auth-buttons">
+                <a href="../SignUpPage/signup.html" class="btn btn-primary-outline">Sign Up</a>
+                <a href="../SignInPage/signin.html" class="btn btn-primary-filled">Sign In</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="apply-container">
+        <div class="apply-header">
+            <h1 class="apply-title">Formulir Pengajuan Adopsi</h1>
+            <p class="apply-sub">Isi data dengan jujur dan lengkap untuk mempercepat proses verifikasi.</p>
+        </div>
+        <div class="apply-card">
+            <form>
+                <div class="form-grid">
+                    <div class="form-row">
+                        <label for="nama">Nama Lengkap</label>
+                        <input id="nama" type="text" placeholder="Contoh: Budi Santoso" required>
+                    </div>
+                    <div class="form-row">
+                        <label for="email">Email</label>
+                        <input id="email" type="email" placeholder="nama@email.com" required>
+                    </div>
+                    <div class="form-row">
+                        <label for="telepon">Nomor Telepon/WA</label>
+                        <input id="telepon" type="tel" placeholder="08xxxxxxxxxx" required>
+                    </div>
+                    <div class="form-row">
+                        <label for="kota">Kota Domisili</label>
+                        <input id="kota" type="text" placeholder="Contoh: Semarang" required>
+                    </div>
+                    <div class="form-row full">
+                        <label for="alamat">Alamat Lengkap</label>
+                        <textarea id="alamat" placeholder="Tulis alamat lengkap Anda" required></textarea>
+                    </div>
+                    <div class="form-row">
+                        <label for="pengalaman">Pengalaman Memelihara</label>
+                        <select id="pengalaman" required>
+                            <option value="" disabled selected>Pilih salah satu</option>
+                            <option>Pemula</option>
+                            <option>Pernah memelihara</option>
+                            <option>Berpengalaman</option>
+                        </select>
+                    </div>
+                    <div class="form-row">
+                        <label for="lingkungan">Lingkungan Tinggal</label>
+                        <select id="lingkungan" required>
+                            <option value="" disabled selected>Pilih salah satu</option>
+                            <option>Rumah</option>
+                            <option>Apartemen/Kontrakan</option>
+                            <option>Lainnya</option>
+                        </select>
+                    </div>
+                    <div class="form-row full">
+                        <label for="alasan">Alasan Mengadopsi</label>
+                        <textarea id="alasan" placeholder="Ceritakan alasan Anda ingin mengadopsi" required></textarea>
+                        <div class="hint">Beritahu kami gaya hidup, waktu luang, dan rencana perawatan.</div>
+                    </div>
+                    <div class="form-row full">
+                        <label for="kondisi">Kondisi Rumah</label>
+                        <textarea id="kondisi" placeholder="Misal: ada halaman, ada kandang, anggota keluarga setuju, dll" required></textarea>
+                    </div>
+                    <div class="form-row full">
+                        <label class="agree"><input type="checkbox" required> Saya setuju dengan <a href="landingpage.html#syarat-ketentuan" style="margin-left:6px;">Syarat & Ketentuan</a> dan <a href="landingpage.html#kebijakan-privasi" style="margin-left:6px;">Kebijakan Privasi</a>.</label>
+                    </div>
+                </div>
+                <div class="cta-bar">
+                    <button type="submit" class="btn-primary"><i class="fa-solid fa-paper-plane"></i> Kirim Pengajuan</button>
+                    <!-- <button type="button" class="btn-outline"> -->
+                        <a href="adoption-detail.html" class= "btn-outline">Kembali ke detail</a>
+                    <!-- </button> -->
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-column footer-brand">
+                <img src="../image/Frame 44.png" alt="FURRY.ID Logo" class="footer-logo">
+                <p>Platform adopsi hewan terpercaya yang menghubungkan sahabat berbulu dengan rumah baru penuh cinta</p>
+            </div>
+            <div class="footer-column footer-navigasi">
+                <h4>Navigasi</h4>
+                <ul>
+                    <li><a href="landingpage.html#home">Home</a></li>
+                    <li><a href="landingpage.html#about">Tentang Kami</a></li>
+                    <li><a href="landingpage.html#home">Cari Hewan</a></li>
+                    <li><a href="#">Posting Hewan</a></li>
+                    <li><a href="landingpage.html#adopsi">Adopsi Hewan</a></li>
+                </ul>
+            </div>
+            <div class="footer-column footer-bantuan">
+                <h4>Bantuan & Dukungan</h4>
+                <ul>
+                    <li><a href="landingpage.html#faq-section">FAQ</a></li>
+                    <li><a href="landingpage.html#panduan-adopsi">Panduan Adopsi</a></li>
+                    <li><a href="landingpage.html#kebijakan-privasi">Kebijakan Privasi</a></li>
+                    <li><a href="landingpage.html#syarat-ketentuan">Syarat & Ketentuan</a></li>
+                </ul>
+            </div>
+            <div class="footer-column footer-contact-social">
+                <div class="footer-social-media">
+                    <h4>Media Sosial</h4>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div id="footer-contact" class="footer-contact">
+                    <h4>Kontak</h4>
+                    <ul>
+                        <li><i class="fa-regular fa-envelope "></i> furry@email.com</li>
+                        <li><i class="fas fa-phone-alt"></i> 0812-3456-7890</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Semarang, Jawa Tengah</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy;2025 Furry.id | All Rights Reserved</p>
+        </div>
+    </footer>
+</body>
+</html>
+
+
